@@ -1,8 +1,8 @@
 {
   "source": {
     "behaviorSchema": 3,
-    "behaviorRevision": 17,
-    "scenarioSchema": 2,
+    "behaviorRevision": 18,
+    "scenarioSchema": 3,
     "paths": [
       "config/woj-behavior.json",
       "config/woj-dungeon-scenarios.json",
@@ -83,9 +83,542 @@
             "mode": "near_player",
             "radius_yards": 60
           }
+        },
+        {
+          "id": "deadmines_smite",
+          "label": "smite",
+          "actorCount": 3,
+          "activation": {
+            "mode": "near_player",
+            "radius_yards": 60
+          }
         }
       ],
       "creatures": [
+        {
+          "id": "deadmines_smite-79345",
+          "actorId": 79345,
+          "spawnId": 79345,
+          "entry": 636,
+          "title": "Defias Blackguard",
+          "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+          "characterBrief": {
+            "identity": "Defias Blackguard at Mr. Smite's weapon point.",
+            "local_goal": "Defend the weapon point.",
+            "allies": [
+              "Mr. Smite and linked Blackguard."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Mr. Smite assists when this guard engages."
+            ],
+            "temperament": "Alert and aggressive.",
+            "risk": "Holds ground.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored aggro text only.",
+            "speech": "Aggro group 0 only.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities.",
+              "Native respawn and aggro are mandatory."
+            ]
+          },
+          "sheet": {
+            "entry": 636,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Blackguard at Mr. Smite's weapon point.",
+              "local_goal": "Defend the weapon point.",
+              "allies": [
+                "Mr. Smite and linked Blackguard."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Mr. Smite assists when this guard engages."
+              ],
+              "temperament": "Alert and aggressive.",
+              "risk": "Holds ground.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored aggro text only.",
+              "speech": "Aggro group 0 only.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities.",
+                "Native respawn and aggro are mandatory."
+              ]
+            },
+            "you": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "abilities": [
+              {
+                "spell": 6408,
+                "slug": "faded",
+                "name": "Faded",
+                "target": "self",
+                "does": "Gain the native Faded aura when respawning.",
+                "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Cheap Shot the hostile that starts combat.",
+                "tendency": "Mandatory immediately on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Execute the stock self-targeted Rupture cast.",
+                "tendency": "First after 3-10 seconds; repeat after 10-15 seconds exactly as authored.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original guard behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 1,
+            "role": "scenario participant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "flee": "Hold ground; this original guard behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 636,
+                "spell": 6408,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": true,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6408,
+                  "slug": "faded",
+                  "name": "Faded",
+                  "target": "self",
+                  "does": "Gain the native Faded aura when respawning.",
+                  "tendency": "Automatic at respawn; removed on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 1833,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  0,
+                  0
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "victim",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": true,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "0–0 ms"
+                },
+                "sheetAbility": {
+                  "spell": 1833,
+                  "slug": "cheap_shot",
+                  "name": "Cheap Shot",
+                  "target": "enemy",
+                  "does": "Cheap Shot the hostile that starts combat.",
+                  "tendency": "Mandatory immediately on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 14903,
+                "initial_ms": [
+                  3000,
+                  10000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–10000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 14903,
+                  "slug": "rupture",
+                  "name": "Rupture",
+                  "target": "self",
+                  "does": "Execute the stock self-targeted Rupture cast.",
+                  "tendency": "First after 3-10 seconds; repeat after 10-15 seconds exactly as authored.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": true,
+              "chance_pct": 100,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ],
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": []
+          }
+        },
+        {
+          "id": "deadmines_smite-79346",
+          "actorId": 79346,
+          "spawnId": 79346,
+          "entry": 636,
+          "title": "Defias Blackguard",
+          "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+          "characterBrief": {
+            "identity": "Defias Blackguard at Mr. Smite's weapon point.",
+            "local_goal": "Defend the weapon point.",
+            "allies": [
+              "Mr. Smite and linked Blackguard."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Mr. Smite assists when this guard engages."
+            ],
+            "temperament": "Alert and aggressive.",
+            "risk": "Holds ground.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored aggro text only.",
+            "speech": "Aggro group 0 only.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities.",
+              "Native respawn and aggro are mandatory."
+            ]
+          },
+          "sheet": {
+            "entry": 636,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Blackguard at Mr. Smite's weapon point.",
+              "local_goal": "Defend the weapon point.",
+              "allies": [
+                "Mr. Smite and linked Blackguard."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Mr. Smite assists when this guard engages."
+              ],
+              "temperament": "Alert and aggressive.",
+              "risk": "Holds ground.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored aggro text only.",
+              "speech": "Aggro group 0 only.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities.",
+                "Native respawn and aggro are mandatory."
+              ]
+            },
+            "you": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "abilities": [
+              {
+                "spell": 6408,
+                "slug": "faded",
+                "name": "Faded",
+                "target": "self",
+                "does": "Gain the native Faded aura when respawning.",
+                "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Cheap Shot the hostile that starts combat.",
+                "tendency": "Mandatory immediately on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Execute the stock self-targeted Rupture cast.",
+                "tendency": "First after 3-10 seconds; repeat after 10-15 seconds exactly as authored.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original guard behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 1,
+            "role": "scenario participant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "flee": "Hold ground; this original guard behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 636,
+                "spell": 6408,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": true,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6408,
+                  "slug": "faded",
+                  "name": "Faded",
+                  "target": "self",
+                  "does": "Gain the native Faded aura when respawning.",
+                  "tendency": "Automatic at respawn; removed on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 1833,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  0,
+                  0
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "victim",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": true,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "0–0 ms"
+                },
+                "sheetAbility": {
+                  "spell": 1833,
+                  "slug": "cheap_shot",
+                  "name": "Cheap Shot",
+                  "target": "enemy",
+                  "does": "Cheap Shot the hostile that starts combat.",
+                  "tendency": "Mandatory immediately on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 14903,
+                "initial_ms": [
+                  3000,
+                  10000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–10000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 14903,
+                  "slug": "rupture",
+                  "name": "Rupture",
+                  "target": "self",
+                  "does": "Execute the stock self-targeted Rupture cast.",
+                  "tendency": "First after 3-10 seconds; repeat after 10-15 seconds exactly as authored.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": true,
+              "chance_pct": 100,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ],
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": []
+          }
+        },
         {
           "id": "deadmines_entrance-79139",
           "actorId": 79139,
@@ -15440,6 +15973,179 @@
             "aggroTalk": {
               "enabled": false,
               "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ],
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": []
+          }
+        },
+        {
+          "id": "deadmines_smite-79337",
+          "actorId": 79337,
+          "spawnId": 79337,
+          "entry": 646,
+          "title": "Mr. Smite",
+          "identity": "Mr. Smite, the Deadmines ship's first mate guarding the ship encounter",
+          "characterBrief": {
+            "identity": "Mr. Smite, first mate.",
+            "local_goal": "Guard the encounter.",
+            "allies": [
+              "Two Blackguards."
+            ],
+            "enemies": [
+              "Visible hostiles."
+            ],
+            "relationships": [
+              "Leads Blackguards.",
+              "Uses the weapon point in phases."
+            ],
+            "temperament": "Confrontational.",
+            "risk": "Never flees; phases pause.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored text only.",
+            "speech": "Phase groups 2 and 3.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities.",
+              "Mandatory phases.",
+              "Server controls phase mechanics."
+            ]
+          },
+          "sheet": {
+            "entry": 646,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Mr. Smite, first mate.",
+              "local_goal": "Guard the encounter.",
+              "allies": [
+                "Two Blackguards."
+              ],
+              "enemies": [
+                "Visible hostiles."
+              ],
+              "relationships": [
+                "Leads Blackguards.",
+                "Uses the weapon point in phases."
+              ],
+              "temperament": "Confrontational.",
+              "risk": "Never flees; phases pause.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored text only.",
+              "speech": "Phase groups 2 and 3.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities.",
+                "Mandatory phases.",
+                "Server controls phase mechanics."
+              ]
+            },
+            "you": "Mr. Smite, the Deadmines ship's first mate guarding the ship encounter",
+            "abilities": [
+              {
+                "spell": 6435,
+                "slug": "smite_slam",
+                "name": "Smite Slam",
+                "target": "enemy",
+                "does": "Slam your current victim with a heavy blow.",
+                "tendency": "Below 33% health, repeat every 6 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original boss behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 1,
+            "role": "primary encounter"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "Mr. Smite, the Deadmines ship's first mate guarding the ship encounter",
+            "flee": "Hold ground; this original boss behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 646,
+                "spell": 6435,
+                "initial_ms": [
+                  3000,
+                  3000
+                ],
+                "repeat_ms": [
+                  6000,
+                  6000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "victim",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "max_caster_health_pct": 33,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–3000 ms",
+                  "repeat": "6000–6000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6435,
+                  "slug": "smite_slam",
+                  "name": "Smite Slam",
+                  "target": "enemy",
+                  "does": "Slam your current victim with a heavy blow.",
+                  "tendency": "Below 33% health, repeat every 6 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": true,
+              "chance_pct": 100,
               "text_group": 0
             },
             "ambientTalk": {

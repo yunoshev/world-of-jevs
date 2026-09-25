@@ -193,7 +193,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 1,
+            "version": 2,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -456,7 +456,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 1,
+            "version": 2,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -1229,7 +1229,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -6657,7 +6657,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -6823,7 +6823,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7151,7 +7151,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7318,7 +7318,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7485,7 +7485,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7652,7 +7652,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7819,7 +7819,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7986,7 +7986,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8153,7 +8153,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8320,7 +8320,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8487,7 +8487,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8654,7 +8654,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8821,7 +8821,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8988,7 +8988,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9155,7 +9155,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9322,7 +9322,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9489,7 +9489,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9656,7 +9656,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9832,7 +9832,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10039,7 +10039,7 @@
           },
           "scenario": {
             "id": "deadmines_rhahk_zor",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -10205,7 +10205,7 @@
           },
           "scenario": {
             "id": "deadmines_rhahk_zor",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -10389,7 +10389,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10634,7 +10634,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "primary encounter"
           },
           "runtime": false,
@@ -10812,7 +10812,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10979,7 +10979,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -11146,7 +11146,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -11313,7 +11313,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -11480,7 +11480,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -11647,7 +11647,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -11814,7 +11814,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -11981,7 +11981,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -12148,7 +12148,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -12315,7 +12315,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -12482,7 +12482,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -12658,7 +12658,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -12883,7 +12883,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -13108,7 +13108,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -13333,7 +13333,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -13558,7 +13558,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -13783,7 +13783,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -14008,7 +14008,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -14224,7 +14224,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -14440,7 +14440,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -14656,7 +14656,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -14872,7 +14872,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -15088,7 +15088,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -15304,7 +15304,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -15520,7 +15520,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -15736,7 +15736,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -15952,7 +15952,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -16165,7 +16165,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 1,
+            "version": 2,
             "role": "primary encounter"
           },
           "runtime": false,
@@ -16362,7 +16362,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -16488,7 +16488,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -16614,7 +16614,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -16740,7 +16740,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -16866,7 +16866,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -16992,7 +16992,7 @@
           },
           "scenario": {
             "id": "deadmines_gilnid",
-            "version": 4,
+            "version": 5,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -17128,7 +17128,7 @@
           },
           "scenario": {
             "id": "deadmines_rhahk_zor",
-            "version": 4,
+            "version": 5,
             "role": "primary encounter"
           },
           "runtime": false,
@@ -17309,7 +17309,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "scenario participant"
           },
           "runtime": true,
@@ -17503,7 +17503,7 @@
           },
           "scenario": {
             "id": "deadmines_sneed",
-            "version": 4,
+            "version": 5,
             "role": "primary encounter"
           },
           "runtime": false,

@@ -1,7 +1,7 @@
 {
   "source": {
     "behaviorSchema": 3,
-    "behaviorRevision": 24,
+    "behaviorRevision": 26,
     "scenarioSchema": 3,
     "paths": [
       "config/woj-behavior.json",
@@ -10,9 +10,9 @@
     ]
   },
   "status": {
-    "strictAccepted": 5,
+    "strictAccepted": 6,
     "strictTotal": 7,
-    "label": "Strict encounter acceptance is in progress. This catalog reports configured policy, not a claim that every Deadmines NPC is accepted."
+    "label": "Six focused encounters have passed strict acceptance. VanCleef stock speech remains unmeasured; full-route, wipe/reset, respawn, save/reload, and two-instance acceptance remain outstanding. This catalog reports configured policy, not invented live state."
   },
   "instances": [
     {
@@ -96,6 +96,15 @@
         {
           "id": "deadmines_greenskin",
           "label": "greenskin",
+          "actorCount": 5,
+          "activation": {
+            "mode": "near_player",
+            "radius_yards": 60
+          }
+        },
+        {
+          "id": "deadmines_vancleef",
+          "label": "vancleef",
           "actorCount": 5,
           "activation": {
             "mode": "near_player",
@@ -321,7 +330,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -330,18 +341,18 @@
           "spawnId": 79345,
           "entry": 636,
           "title": "Defias Blackguard",
-          "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+          "identity": "a Defias Blackguard guarding the Deadmines ship",
           "characterBrief": {
-            "identity": "Defias Blackguard at Mr. Smite's post.",
-            "local_goal": "Guard the weapon point.",
+            "identity": "Defias Blackguard aboard the Deadmines ship.",
+            "local_goal": "Guard the ship against intruders.",
             "allies": [
-              "Mr. Smite and linked Blackguard."
+              "Nearby Defias defenders."
             ],
             "enemies": [
               "Visible ship intruders."
             ],
             "relationships": [
-              "Mr. Smite aids this guard."
+              "Guards Mr. Smite's post or VanCleef's deck."
             ],
             "temperament": "Aggressive.",
             "risk": "Holds ground.",
@@ -351,24 +362,23 @@
             "constraints": [
               "Use only eligible actions and targets.",
               "Do not invent abilities.",
-              "Preserve native respawn and aggro.",
-              "Stock energy attacks unavailable."
+              "Preserve native aggro and speech."
             ]
           },
           "sheet": {
             "entry": 636,
             "schema_version": 2,
             "character_brief": {
-              "identity": "Defias Blackguard at Mr. Smite's post.",
-              "local_goal": "Guard the weapon point.",
+              "identity": "Defias Blackguard aboard the Deadmines ship.",
+              "local_goal": "Guard the ship against intruders.",
               "allies": [
-                "Mr. Smite and linked Blackguard."
+                "Nearby Defias defenders."
               ],
               "enemies": [
                 "Visible ship intruders."
               ],
               "relationships": [
-                "Mr. Smite aids this guard."
+                "Guards Mr. Smite's post or VanCleef's deck."
               ],
               "temperament": "Aggressive.",
               "risk": "Holds ground.",
@@ -378,11 +388,10 @@
               "constraints": [
                 "Use only eligible actions and targets.",
                 "Do not invent abilities.",
-                "Preserve native respawn and aggro.",
-                "Stock energy attacks unavailable."
+                "Preserve native aggro and speech."
               ]
             },
-            "you": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "you": "a Defias Blackguard guarding the Deadmines ship",
             "abilities": [
               {
                 "spell": 6408,
@@ -391,6 +400,24 @@
                 "target": "self",
                 "does": "Gain the native Faded aura when respawning.",
                 "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Ambush the hostile that triggered your aggro.",
+                "tendency": "Cast once on aggro before dropping Faded.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Use the original self-targeted Rupture cast during combat.",
+                "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
                 "ally_below_pct": null
               }
             ],
@@ -411,7 +438,7 @@
           },
           "runtime": false,
           "original": {
-            "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "identity": "a Defias Blackguard guarding the Deadmines ship",
             "flee": "Hold ground; this original guard behavior does not flee.",
             "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
           },
@@ -491,7 +518,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -500,18 +529,18 @@
           "spawnId": 79346,
           "entry": 636,
           "title": "Defias Blackguard",
-          "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+          "identity": "a Defias Blackguard guarding the Deadmines ship",
           "characterBrief": {
-            "identity": "Defias Blackguard at Mr. Smite's post.",
-            "local_goal": "Guard the weapon point.",
+            "identity": "Defias Blackguard aboard the Deadmines ship.",
+            "local_goal": "Guard the ship against intruders.",
             "allies": [
-              "Mr. Smite and linked Blackguard."
+              "Nearby Defias defenders."
             ],
             "enemies": [
               "Visible ship intruders."
             ],
             "relationships": [
-              "Mr. Smite aids this guard."
+              "Guards Mr. Smite's post or VanCleef's deck."
             ],
             "temperament": "Aggressive.",
             "risk": "Holds ground.",
@@ -521,24 +550,23 @@
             "constraints": [
               "Use only eligible actions and targets.",
               "Do not invent abilities.",
-              "Preserve native respawn and aggro.",
-              "Stock energy attacks unavailable."
+              "Preserve native aggro and speech."
             ]
           },
           "sheet": {
             "entry": 636,
             "schema_version": 2,
             "character_brief": {
-              "identity": "Defias Blackguard at Mr. Smite's post.",
-              "local_goal": "Guard the weapon point.",
+              "identity": "Defias Blackguard aboard the Deadmines ship.",
+              "local_goal": "Guard the ship against intruders.",
               "allies": [
-                "Mr. Smite and linked Blackguard."
+                "Nearby Defias defenders."
               ],
               "enemies": [
                 "Visible ship intruders."
               ],
               "relationships": [
-                "Mr. Smite aids this guard."
+                "Guards Mr. Smite's post or VanCleef's deck."
               ],
               "temperament": "Aggressive.",
               "risk": "Holds ground.",
@@ -548,11 +576,10 @@
               "constraints": [
                 "Use only eligible actions and targets.",
                 "Do not invent abilities.",
-                "Preserve native respawn and aggro.",
-                "Stock energy attacks unavailable."
+                "Preserve native aggro and speech."
               ]
             },
-            "you": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "you": "a Defias Blackguard guarding the Deadmines ship",
             "abilities": [
               {
                 "spell": 6408,
@@ -561,6 +588,24 @@
                 "target": "self",
                 "does": "Gain the native Faded aura when respawning.",
                 "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Ambush the hostile that triggered your aggro.",
+                "tendency": "Cast once on aggro before dropping Faded.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Use the original self-targeted Rupture cast during combat.",
+                "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
                 "ally_below_pct": null
               }
             ],
@@ -581,7 +626,7 @@
           },
           "runtime": false,
           "original": {
-            "identity": "a Defias Blackguard guarding Mr. Smite's weapon point in the Deadmines",
+            "identity": "a Defias Blackguard guarding the Deadmines ship",
             "flee": "Hold ground; this original guard behavior does not flee.",
             "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
           },
@@ -661,7 +706,1021 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_vancleef-79369",
+          "actorId": 79369,
+          "spawnId": 79369,
+          "entry": 636,
+          "title": "Defias Blackguard",
+          "identity": "a Defias Blackguard guarding the Deadmines ship",
+          "characterBrief": {
+            "identity": "Defias Blackguard aboard the Deadmines ship.",
+            "local_goal": "Guard the ship against intruders.",
+            "allies": [
+              "Nearby Defias defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Guards Mr. Smite's post or VanCleef's deck."
+            ],
+            "temperament": "Aggressive.",
+            "risk": "Holds ground.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored aggro text only.",
+            "speech": "Aggro group 0 only.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities.",
+              "Preserve native aggro and speech."
+            ]
+          },
+          "sheet": {
+            "entry": 636,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Blackguard aboard the Deadmines ship.",
+              "local_goal": "Guard the ship against intruders.",
+              "allies": [
+                "Nearby Defias defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Guards Mr. Smite's post or VanCleef's deck."
+              ],
+              "temperament": "Aggressive.",
+              "risk": "Holds ground.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored aggro text only.",
+              "speech": "Aggro group 0 only.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities.",
+                "Preserve native aggro and speech."
+              ]
+            },
+            "you": "a Defias Blackguard guarding the Deadmines ship",
+            "abilities": [
+              {
+                "spell": 6408,
+                "slug": "faded",
+                "name": "Faded",
+                "target": "self",
+                "does": "Gain the native Faded aura when respawning.",
+                "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Ambush the hostile that triggered your aggro.",
+                "tendency": "Cast once on aggro before dropping Faded.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Use the original self-targeted Rupture cast during combat.",
+                "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original guard behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_vancleef",
+            "label": "vancleef",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_vancleef",
+            "version": 4,
+            "role": "scenario participant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Blackguard guarding the Deadmines ship",
+            "flee": "Hold ground; this original guard behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 636,
+                "spell": 6408,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": true,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6408,
+                  "slug": "faded",
+                  "name": "Faded",
+                  "target": "self",
+                  "does": "Gain the native Faded aura when respawning.",
+                  "tendency": "Automatic at respawn; removed on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 14903,
+                "initial_ms": [
+                  3000,
+                  10000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–10000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 14903,
+                  "slug": "rupture",
+                  "name": "Rupture",
+                  "target": "self",
+                  "does": "Use the original self-targeted Rupture cast during combat.",
+                  "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": [
+              {
+                "id": "blackguard_79369_aggro",
+                "actor_id": 79369,
+                "entry": 636,
+                "actions": [
+                  {
+                    "kind": "cast",
+                    "spell": 1833,
+                    "target": "aggro_invoker"
+                  },
+                  {
+                    "kind": "remove_aura",
+                    "spell": 6408,
+                    "target": "self"
+                  },
+                  {
+                    "kind": "talk",
+                    "text_group": 0
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "deadmines_vancleef-79370",
+          "actorId": 79370,
+          "spawnId": 79370,
+          "entry": 636,
+          "title": "Defias Blackguard",
+          "identity": "a Defias Blackguard guarding the Deadmines ship",
+          "characterBrief": {
+            "identity": "Defias Blackguard aboard the Deadmines ship.",
+            "local_goal": "Guard the ship against intruders.",
+            "allies": [
+              "Nearby Defias defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Guards Mr. Smite's post or VanCleef's deck."
+            ],
+            "temperament": "Aggressive.",
+            "risk": "Holds ground.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored aggro text only.",
+            "speech": "Aggro group 0 only.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities.",
+              "Preserve native aggro and speech."
+            ]
+          },
+          "sheet": {
+            "entry": 636,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Blackguard aboard the Deadmines ship.",
+              "local_goal": "Guard the ship against intruders.",
+              "allies": [
+                "Nearby Defias defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Guards Mr. Smite's post or VanCleef's deck."
+              ],
+              "temperament": "Aggressive.",
+              "risk": "Holds ground.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored aggro text only.",
+              "speech": "Aggro group 0 only.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities.",
+                "Preserve native aggro and speech."
+              ]
+            },
+            "you": "a Defias Blackguard guarding the Deadmines ship",
+            "abilities": [
+              {
+                "spell": 6408,
+                "slug": "faded",
+                "name": "Faded",
+                "target": "self",
+                "does": "Gain the native Faded aura when respawning.",
+                "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Ambush the hostile that triggered your aggro.",
+                "tendency": "Cast once on aggro before dropping Faded.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Use the original self-targeted Rupture cast during combat.",
+                "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original guard behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_vancleef",
+            "label": "vancleef",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_vancleef",
+            "version": 4,
+            "role": "scenario participant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Blackguard guarding the Deadmines ship",
+            "flee": "Hold ground; this original guard behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 636,
+                "spell": 6408,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": true,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6408,
+                  "slug": "faded",
+                  "name": "Faded",
+                  "target": "self",
+                  "does": "Gain the native Faded aura when respawning.",
+                  "tendency": "Automatic at respawn; removed on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 14903,
+                "initial_ms": [
+                  3000,
+                  10000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–10000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 14903,
+                  "slug": "rupture",
+                  "name": "Rupture",
+                  "target": "self",
+                  "does": "Use the original self-targeted Rupture cast during combat.",
+                  "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": [
+              {
+                "id": "blackguard_79370_aggro",
+                "actor_id": 79370,
+                "entry": 636,
+                "actions": [
+                  {
+                    "kind": "cast",
+                    "spell": 1833,
+                    "target": "aggro_invoker"
+                  },
+                  {
+                    "kind": "remove_aura",
+                    "spell": 6408,
+                    "target": "self"
+                  },
+                  {
+                    "kind": "talk",
+                    "text_group": 0
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "deadmines_vancleef-2147487300",
+          "actorId": 2147487300,
+          "spawnId": null,
+          "entry": 636,
+          "title": "Defias Blackguard",
+          "identity": "a Defias Blackguard guarding the Deadmines ship",
+          "characterBrief": {
+            "identity": "Defias Blackguard aboard the Deadmines ship.",
+            "local_goal": "Guard the ship against intruders.",
+            "allies": [
+              "Nearby Defias defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Guards Mr. Smite's post or VanCleef's deck."
+            ],
+            "temperament": "Aggressive.",
+            "risk": "Holds ground.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored aggro text only.",
+            "speech": "Aggro group 0 only.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities.",
+              "Preserve native aggro and speech."
+            ]
+          },
+          "sheet": {
+            "entry": 636,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Blackguard aboard the Deadmines ship.",
+              "local_goal": "Guard the ship against intruders.",
+              "allies": [
+                "Nearby Defias defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Guards Mr. Smite's post or VanCleef's deck."
+              ],
+              "temperament": "Aggressive.",
+              "risk": "Holds ground.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored aggro text only.",
+              "speech": "Aggro group 0 only.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities.",
+                "Preserve native aggro and speech."
+              ]
+            },
+            "you": "a Defias Blackguard guarding the Deadmines ship",
+            "abilities": [
+              {
+                "spell": 6408,
+                "slug": "faded",
+                "name": "Faded",
+                "target": "self",
+                "does": "Gain the native Faded aura when respawning.",
+                "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Ambush the hostile that triggered your aggro.",
+                "tendency": "Cast once on aggro before dropping Faded.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Use the original self-targeted Rupture cast during combat.",
+                "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original guard behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_vancleef",
+            "label": "vancleef",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_vancleef",
+            "version": 4,
+            "role": "optional assistant"
+          },
+          "runtime": true,
+          "original": {
+            "identity": "a Defias Blackguard guarding the Deadmines ship",
+            "flee": "Hold ground; this original guard behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 636,
+                "spell": 6408,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": true,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6408,
+                  "slug": "faded",
+                  "name": "Faded",
+                  "target": "self",
+                  "does": "Gain the native Faded aura when respawning.",
+                  "tendency": "Automatic at respawn; removed on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 14903,
+                "initial_ms": [
+                  3000,
+                  10000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–10000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 14903,
+                  "slug": "rupture",
+                  "name": "Rupture",
+                  "target": "self",
+                  "does": "Use the original self-targeted Rupture cast during combat.",
+                  "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": {
+              "actor_id": 2147487300,
+              "entry": 636,
+              "source_actor_id": 79336,
+              "created_by_spell": 5200,
+              "summon_index": 1,
+              "control": "inherit",
+              "aggro_talk": false,
+              "ambient_talk": false,
+              "flee_enabled": false
+            },
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": [
+              {
+                "id": "blackguard_7300_aggro",
+                "actor_id": 2147487300,
+                "entry": 636,
+                "actions": [
+                  {
+                    "kind": "cast",
+                    "spell": 1833,
+                    "target": "aggro_invoker"
+                  },
+                  {
+                    "kind": "remove_aura",
+                    "spell": 6408,
+                    "target": "self"
+                  },
+                  {
+                    "kind": "talk",
+                    "text_group": 0
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "deadmines_vancleef-2147487301",
+          "actorId": 2147487301,
+          "spawnId": null,
+          "entry": 636,
+          "title": "Defias Blackguard",
+          "identity": "a Defias Blackguard guarding the Deadmines ship",
+          "characterBrief": {
+            "identity": "Defias Blackguard aboard the Deadmines ship.",
+            "local_goal": "Guard the ship against intruders.",
+            "allies": [
+              "Nearby Defias defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Guards Mr. Smite's post or VanCleef's deck."
+            ],
+            "temperament": "Aggressive.",
+            "risk": "Holds ground.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored aggro text only.",
+            "speech": "Aggro group 0 only.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities.",
+              "Preserve native aggro and speech."
+            ]
+          },
+          "sheet": {
+            "entry": 636,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Blackguard aboard the Deadmines ship.",
+              "local_goal": "Guard the ship against intruders.",
+              "allies": [
+                "Nearby Defias defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Guards Mr. Smite's post or VanCleef's deck."
+              ],
+              "temperament": "Aggressive.",
+              "risk": "Holds ground.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored aggro text only.",
+              "speech": "Aggro group 0 only.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities.",
+                "Preserve native aggro and speech."
+              ]
+            },
+            "you": "a Defias Blackguard guarding the Deadmines ship",
+            "abilities": [
+              {
+                "spell": 6408,
+                "slug": "faded",
+                "name": "Faded",
+                "target": "self",
+                "does": "Gain the native Faded aura when respawning.",
+                "tendency": "Automatic at respawn; removed on aggro.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 1833,
+                "slug": "cheap_shot",
+                "name": "Cheap Shot",
+                "target": "enemy",
+                "does": "Ambush the hostile that triggered your aggro.",
+                "tendency": "Cast once on aggro before dropping Faded.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 14903,
+                "slug": "rupture",
+                "name": "Rupture",
+                "target": "self",
+                "does": "Use the original self-targeted Rupture cast during combat.",
+                "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; this original guard behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_vancleef",
+            "label": "vancleef",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_vancleef",
+            "version": 4,
+            "role": "optional assistant"
+          },
+          "runtime": true,
+          "original": {
+            "identity": "a Defias Blackguard guarding the Deadmines ship",
+            "flee": "Hold ground; this original guard behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 636,
+                "spell": 6408,
+                "initial_ms": [
+                  0,
+                  0
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": true,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–0 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6408,
+                  "slug": "faded",
+                  "name": "Faded",
+                  "target": "self",
+                  "does": "Gain the native Faded aura when respawning.",
+                  "tendency": "Automatic at respawn; removed on aggro.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 636,
+                "spell": 14903,
+                "initial_ms": [
+                  3000,
+                  10000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "3000–10000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 14903,
+                  "slug": "rupture",
+                  "name": "Rupture",
+                  "target": "self",
+                  "does": "Use the original self-targeted Rupture cast during combat.",
+                  "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": {
+              "actor_id": 2147487301,
+              "entry": 636,
+              "source_actor_id": 79336,
+              "created_by_spell": 5200,
+              "summon_index": 2,
+              "control": "inherit",
+              "aggro_talk": false,
+              "ambient_talk": false,
+              "flee_enabled": false
+            },
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": [
+              {
+                "id": "blackguard_7301_aggro",
+                "actor_id": 2147487301,
+                "entry": 636,
+                "actions": [
+                  {
+                    "kind": "cast",
+                    "spell": 1833,
+                    "target": "aggro_invoker"
+                  },
+                  {
+                    "kind": "remove_aura",
+                    "spell": 6408,
+                    "target": "self"
+                  },
+                  {
+                    "kind": "talk",
+                    "text_group": 0
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -917,7 +1976,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -1173,7 +2234,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -1435,7 +2498,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -1597,7 +2662,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -1759,7 +2826,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -1921,7 +2990,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -2083,7 +3154,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -2245,7 +3318,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -2407,7 +3482,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -2569,7 +3646,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -2731,7 +3810,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -2893,7 +3974,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -3055,7 +4138,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -3217,7 +4302,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -3379,7 +4466,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -3541,7 +4630,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -3703,7 +4794,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -3865,7 +4958,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4027,7 +5122,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4189,7 +5286,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4351,7 +5450,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4513,7 +5614,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4675,7 +5778,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4837,7 +5942,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -4999,7 +6106,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -5161,7 +6270,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -5323,7 +6434,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -5485,7 +6598,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -5647,7 +6762,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -5809,7 +6926,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -5971,7 +7090,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -6133,7 +7254,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -6295,7 +7418,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -6457,7 +7582,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -6619,7 +7746,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -6785,7 +7914,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -6951,7 +8082,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -7131,7 +8264,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -7311,7 +8446,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -7491,7 +8628,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -7671,7 +8810,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -7851,7 +8992,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -8031,7 +9174,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -8211,7 +9356,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -8391,7 +9538,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -8571,7 +9720,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -8751,7 +9902,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -8931,7 +10084,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -9111,7 +10266,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -9291,7 +10448,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -9471,7 +10630,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -9651,7 +10812,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -9831,7 +10994,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -10011,7 +11176,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -10191,7 +11358,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -10371,7 +11540,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -10551,7 +11722,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -10731,7 +11904,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -10993,7 +12168,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -11255,7 +12432,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -11517,7 +12696,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -11779,7 +12960,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -12041,7 +13224,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -12303,7 +13488,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -12565,7 +13752,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -12727,7 +13916,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -12894,7 +14085,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -13061,7 +14254,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -13228,7 +14423,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -13395,7 +14592,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -13562,7 +14761,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -13729,7 +14930,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -13896,7 +15099,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -14063,7 +15268,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -14230,7 +15437,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -14397,7 +15606,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -14564,7 +15775,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -14731,7 +15944,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -14898,7 +16113,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -15065,7 +16282,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -15232,7 +16451,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -15399,7 +16620,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -15615,7 +16838,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -15781,7 +17006,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -15947,7 +17174,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -16210,7 +17439,269 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_vancleef-79336",
+          "actorId": 79336,
+          "spawnId": 79336,
+          "entry": 639,
+          "title": "Edwin VanCleef",
+          "identity": "Edwin VanCleef, the Defias Kingpin defending the Brotherhood aboard the Deadmines ship",
+          "characterBrief": {
+            "identity": "Edwin VanCleef, Defias Kingpin.",
+            "local_goal": "Defend the Brotherhood.",
+            "allies": [
+              "Defias defenders summoned from shadows."
+            ],
+            "enemies": [
+              "Visible challengers."
+            ],
+            "relationships": [
+              "Leads the Brotherhood."
+            ],
+            "temperament": "Defiant.",
+            "risk": "Holds ground; calls allies when wounded.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "Authored Brotherhood lines only.",
+            "speech": "Aggro, health, kill, death groups 0-5.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities.",
+              "Preserve health speech."
+            ]
+          },
+          "sheet": {
+            "entry": 639,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Edwin VanCleef, Defias Kingpin.",
+              "local_goal": "Defend the Brotherhood.",
+              "allies": [
+                "Defias defenders summoned from shadows."
+              ],
+              "enemies": [
+                "Visible challengers."
+              ],
+              "relationships": [
+                "Leads the Brotherhood."
+              ],
+              "temperament": "Defiant.",
+              "risk": "Holds ground; calls allies when wounded.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "Authored Brotherhood lines only.",
+              "speech": "Aggro, health, kill, death groups 0-5.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities.",
+                "Preserve health speech."
+              ]
+            },
+            "you": "Edwin VanCleef, the Defias Kingpin defending the Brotherhood aboard the Deadmines ship",
+            "abilities": [
+              {
+                "spell": 674,
+                "slug": "dual_wield",
+                "name": "Dual Wield",
+                "target": "self",
+                "does": "Equip your native dual-wield fighting aura.",
+                "tendency": "Cast once out of combat, one second after spawn.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 5200,
+                "slug": "vancleef_allies",
+                "name": "VanCleef's Allies",
+                "target": "self",
+                "does": "Call your allies out of the shadows.",
+                "tendency": "Cast once when your health falls to 50% or lower.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold ground; original VanCleef has no flee action."
+          },
+          "group": {
+            "id": "deadmines_vancleef",
+            "label": "vancleef",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_vancleef",
+            "version": 4,
+            "role": "primary encounter"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "Edwin VanCleef, the Defias Kingpin defending the Brotherhood aboard the Deadmines ship",
+            "flee": "Hold ground; original VanCleef has no flee action.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 639,
+                "spell": 674,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  0,
+                  0
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_caster_out_of_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": true,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "0–0 ms"
+                },
+                "sheetAbility": {
+                  "spell": 674,
+                  "slug": "dual_wield",
+                  "name": "Dual Wield",
+                  "target": "self",
+                  "does": "Equip your native dual-wield fighting aura.",
+                  "tendency": "Cast once out of combat, one second after spawn.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [
+              {
+                "actor_id": 2147487300,
+                "entry": 636,
+                "source_actor_id": 79336,
+                "created_by_spell": 5200,
+                "summon_index": 1,
+                "control": "inherit",
+                "aggro_talk": false,
+                "ambient_talk": false,
+                "flee_enabled": false
+              },
+              {
+                "actor_id": 2147487301,
+                "entry": 636,
+                "source_actor_id": 79336,
+                "created_by_spell": 5200,
+                "summon_index": 2,
+                "control": "inherit",
+                "aggro_talk": false,
+                "ambient_talk": false,
+                "flee_enabled": false
+              }
+            ],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [
+              {
+                "id": "vancleef_mid_talk",
+                "actor_id": 79336,
+                "entry": 639,
+                "health_pct_min": 34,
+                "health_pct_max": 66,
+                "actions": [
+                  {
+                    "kind": "talk",
+                    "text_group": 1
+                  }
+                ]
+              },
+              {
+                "id": "vancleef_allies",
+                "actor_id": 79336,
+                "entry": 639,
+                "health_pct_min": 0,
+                "health_pct_max": 50,
+                "actions": [
+                  {
+                    "kind": "cast",
+                    "spell": 5200,
+                    "target": "self"
+                  },
+                  {
+                    "kind": "talk",
+                    "text_group": 2
+                  }
+                ]
+              },
+              {
+                "id": "vancleef_low_talk",
+                "actor_id": 79336,
+                "entry": 639,
+                "health_pct_min": 0,
+                "health_pct_max": 33,
+                "actions": [
+                  {
+                    "kind": "talk",
+                    "text_group": 3
+                  }
+                ]
+              }
+            ],
+            "aggroEvents": [
+              {
+                "id": "vancleef_aggro",
+                "actor_id": 79336,
+                "entry": 639,
+                "actions": [
+                  {
+                    "kind": "talk",
+                    "text_group": 0
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -16388,7 +17879,9 @@
                 "final_object_state": 0
               }
             ],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -16555,7 +18048,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -16722,7 +18217,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -16889,7 +18386,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -17056,7 +18555,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -17223,7 +18724,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -17390,7 +18893,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -17557,7 +19062,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -17724,7 +19231,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -17891,7 +19400,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -18058,7 +19569,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -18225,7 +19738,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -18450,7 +19965,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -18675,7 +20192,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -18900,7 +20419,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -19125,7 +20646,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -19350,7 +20873,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -19575,7 +21100,9 @@
             ],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -19694,7 +21221,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -19813,7 +21342,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -20029,7 +21560,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -20245,7 +21778,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -20461,7 +21996,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -20677,7 +22214,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -20893,7 +22432,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -21109,7 +22650,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -21325,7 +22868,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -21541,7 +23086,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -21757,7 +23304,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -21973,7 +23522,9 @@
             "summons": [],
             "createdBy": null,
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22186,7 +23737,9 @@
                 "restore_combat_ms": 3000,
                 "tactical_delay_ms": 10000
               }
-            ]
+            ],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22312,7 +23865,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22438,7 +23993,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22564,7 +24121,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22690,7 +24249,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22816,7 +24377,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -22942,7 +24505,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -23123,7 +24688,9 @@
                 "instance_save_token_index": 2
               }
             ],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -23308,7 +24875,9 @@
                 "final_object_state": 0
               }
             ],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -23543,7 +25112,9 @@
                 "expected_summon_count": 1
               }
             ],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -23671,7 +25242,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -23799,7 +25372,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -23927,7 +25502,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24055,7 +25632,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24183,7 +25762,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24311,7 +25892,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24439,7 +26022,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24567,7 +26152,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24695,7 +26282,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24823,7 +26412,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -24951,7 +26542,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25079,7 +26672,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25207,7 +26802,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25335,7 +26932,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25463,7 +27062,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25591,7 +27192,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25719,7 +27322,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25847,7 +27452,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -25975,7 +27582,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -26103,7 +27712,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         },
         {
@@ -26231,7 +27842,9 @@
               "flee_enabled": false
             },
             "deathEffects": [],
-            "healthPhases": []
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
           }
         }
       ]

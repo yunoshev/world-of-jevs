@@ -1,7 +1,7 @@
 {
   "source": {
     "behaviorSchema": 3,
-    "behaviorRevision": 20,
+    "behaviorRevision": 22,
     "scenarioSchema": 3,
     "paths": [
       "config/woj-behavior.json",
@@ -87,7 +87,7 @@
         {
           "id": "deadmines_smite",
           "label": "smite",
-          "actorCount": 45,
+          "actorCount": 50,
           "activation": {
             "mode": "near_player",
             "radius_yards": 60
@@ -177,7 +177,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -347,7 +347,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "scenario participant"
           },
           "runtime": false,
@@ -6805,7 +6805,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -6984,7 +6984,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7163,7 +7163,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7342,7 +7342,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7521,7 +7521,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7700,7 +7700,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -7879,7 +7879,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8058,7 +8058,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8237,7 +8237,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8416,7 +8416,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8595,7 +8595,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8774,7 +8774,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -8953,7 +8953,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9132,7 +9132,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9311,7 +9311,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9490,7 +9490,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9669,7 +9669,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -9848,7 +9848,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10027,7 +10027,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10206,7 +10206,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10385,7 +10385,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": false,
@@ -10479,6 +10479,1054 @@
                 "flee_enabled": false
               }
             ],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_smite-79313",
+          "actorId": 79313,
+          "spawnId": 79313,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 6,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_smite-79322",
+          "actorId": 79322,
+          "spawnId": 79322,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 6,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_smite-79338",
+          "actorId": 79338,
+          "spawnId": 79338,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 6,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_smite-79352",
+          "actorId": 79352,
+          "spawnId": 79352,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 6,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
             "createdBy": null,
             "deathEffects": [],
             "healthPhases": []
@@ -17495,6 +18543,125 @@
           }
         },
         {
+          "id": "deadmines_smite-79325",
+          "actorId": 79325,
+          "spawnId": 79325,
+          "entry": 3947,
+          "title": "Goblin Shipbuilder",
+          "identity": "a Goblin Shipbuilder defending your work area near Mr. Smite in the Deadmines",
+          "characterBrief": {
+            "identity": "Goblin Shipbuilder working on the Deadmines ship.",
+            "local_goal": "Defend your work area and nearby crew.",
+            "allies": [
+              "Nearby ship crew and Defias defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Works beside a Defias Pirate near Mr. Smite."
+            ],
+            "temperament": "Defensive.",
+            "risk": "Seeks nearby help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, and listed triggers.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities.",
+              "Preserve native wander and respawn."
+            ]
+          },
+          "sheet": {
+            "entry": 3947,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Goblin Shipbuilder working on the Deadmines ship.",
+              "local_goal": "Defend your work area and nearby crew.",
+              "allies": [
+                "Nearby ship crew and Defias defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Works beside a Defias Pirate near Mr. Smite."
+              ],
+              "temperament": "Defensive.",
+              "risk": "Seeks nearby help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, and listed triggers.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities.",
+                "Preserve native wander and respawn."
+              ]
+            },
+            "you": "a Goblin Shipbuilder defending your work area near Mr. Smite in the Deadmines",
+            "abilities": [],
+            "flee": "When nearly dead, run to find nearby help."
+          },
+          "group": {
+            "id": "deadmines_smite",
+            "label": "smite",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_smite",
+            "version": 6,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Goblin Shipbuilder defending your work area near Mr. Smite in the Deadmines",
+            "flee": "When nearly dead, run to find nearby help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
           "id": "deadmines_sneed_room-79192",
           "actorId": 79192,
           "spawnId": 79192,
@@ -19738,7 +20905,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "primary encounter"
           },
           "runtime": false,
@@ -21294,7 +22461,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -21422,7 +22589,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -21550,7 +22717,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -21678,7 +22845,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -21806,7 +22973,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -21934,7 +23101,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22062,7 +23229,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22190,7 +23357,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22318,7 +23485,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22446,7 +23613,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22574,7 +23741,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22702,7 +23869,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22830,7 +23997,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -22958,7 +24125,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23086,7 +24253,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23214,7 +24381,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23342,7 +24509,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23470,7 +24637,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23598,7 +24765,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23726,7 +24893,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,
@@ -23854,7 +25021,7 @@
           },
           "scenario": {
             "id": "deadmines_smite",
-            "version": 4,
+            "version": 6,
             "role": "optional assistant"
           },
           "runtime": true,

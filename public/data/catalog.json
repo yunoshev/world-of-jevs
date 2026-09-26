@@ -1,7 +1,7 @@
 {
   "source": {
     "behaviorSchema": 3,
-    "behaviorRevision": 27,
+    "behaviorRevision": 28,
     "scenarioSchema": 3,
     "paths": [
       "config/woj-behavior.json",
@@ -12,7 +12,7 @@
   "status": {
     "strictAccepted": 7,
     "strictTotal": 7,
-    "label": "All seven focused encounters have passed strict acceptance. This is not full-instance or route acceptance: full-route, wipe/reset, respawn, save/reload, and two-instance acceptance remain outstanding. Literal stock-speech parity is not measured. This catalog reports configured policy, not invented live state."
+    "label": "All seven focused encounters have passed strict acceptance. The 23 static post-Rhahk bindings shown here are configured-only, not physically or strictly accepted. This is not full-instance, full-route, or trash acceptance; it does not claim 149 of 202 hostile spawns are accepted. Wipe/reset, respawn, save/reload, and two-instance acceptance remain outstanding. Literal stock-speech parity is not measured. This catalog reports configured policy, not invented live state."
   },
   "instances": [
     {
@@ -52,6 +52,15 @@
           "id": "deadmines_rhahk_boss",
           "label": "rhahk boss",
           "actorCount": 1,
+          "activation": {
+            "mode": "near_player",
+            "radius_yards": 60
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk",
+          "label": "post rhahk",
+          "actorCount": 23,
           "activation": {
             "mode": "near_player",
             "radius_yards": 60
@@ -2206,6 +2215,526 @@
           }
         },
         {
+          "id": "deadmines_post_rhahk-79171",
+          "actorId": 79171,
+          "spawnId": 79171,
+          "entry": 1729,
+          "title": "Defias Evoker Protecting The Deadmines Entrance With Fire Magic",
+          "identity": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+          "characterBrief": {
+            "identity": "Defias Evoker at the Deadmines entrance.",
+            "local_goal": "Protect the entrance with configured magic.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Supports nearby Defias defenders."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1729,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Evoker at the Deadmines entrance.",
+              "local_goal": "Protect the entrance with configured magic.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Supports nearby Defias defenders."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor while outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 11829,
+                "slug": "flamestrike",
+                "name": "Flamestrike",
+                "target": "enemy",
+                "does": "Strike a hostile from your threat list with fire.",
+                "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "quick_flame_ward",
+                "name": "Quick Flame Ward",
+                "target": "self",
+                "does": "Use Quick Flame Ward on yourself in combat.",
+                "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1729,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor while outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1729,
+                "spell": 11829,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 11829,
+                  "slug": "flamestrike",
+                  "name": "Flamestrike",
+                  "target": "enemy",
+                  "does": "Strike a hostile from your threat list with fire.",
+                  "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1729,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "quick_flame_ward",
+                  "name": "Quick Flame Ward",
+                  "target": "self",
+                  "does": "Use Quick Flame Ward on yourself in combat.",
+                  "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79177",
+          "actorId": 79177,
+          "spawnId": 79177,
+          "entry": 1729,
+          "title": "Defias Evoker Protecting The Deadmines Entrance With Fire Magic",
+          "identity": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+          "characterBrief": {
+            "identity": "Defias Evoker at the Deadmines entrance.",
+            "local_goal": "Protect the entrance with configured magic.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Supports nearby Defias defenders."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1729,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Evoker at the Deadmines entrance.",
+              "local_goal": "Protect the entrance with configured magic.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Supports nearby Defias defenders."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor while outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 11829,
+                "slug": "flamestrike",
+                "name": "Flamestrike",
+                "target": "enemy",
+                "does": "Strike a hostile from your threat list with fire.",
+                "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "quick_flame_ward",
+                "name": "Quick Flame Ward",
+                "target": "self",
+                "does": "Use Quick Flame Ward on yourself in combat.",
+                "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1729,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor while outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1729,
+                "spell": 11829,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 11829,
+                  "slug": "flamestrike",
+                  "name": "Flamestrike",
+                  "target": "enemy",
+                  "does": "Strike a hostile from your threat list with fire.",
+                  "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1729,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "quick_flame_ward",
+                  "name": "Quick Flame Ward",
+                  "target": "self",
+                  "does": "Use Quick Flame Ward on yourself in combat.",
+                  "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
           "id": "deadmines_entrance-79188",
           "actorId": 79188,
           "spawnId": 79188,
@@ -2370,6 +2899,266 @@
                 "require_target_in_combat": false,
                 "require_engaged": false,
                 "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 11829,
+                  "slug": "flamestrike",
+                  "name": "Flamestrike",
+                  "target": "enemy",
+                  "does": "Strike a hostile from your threat list with fire.",
+                  "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1729,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "quick_flame_ward",
+                  "name": "Quick Flame Ward",
+                  "target": "self",
+                  "does": "Use Quick Flame Ward on yourself in combat.",
+                  "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79245",
+          "actorId": 79245,
+          "spawnId": 79245,
+          "entry": 1729,
+          "title": "Defias Evoker Protecting The Deadmines Entrance With Fire Magic",
+          "identity": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+          "characterBrief": {
+            "identity": "Defias Evoker at the Deadmines entrance.",
+            "local_goal": "Protect the entrance with configured magic.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Supports nearby Defias defenders."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1729,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Evoker at the Deadmines entrance.",
+              "local_goal": "Protect the entrance with configured magic.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Supports nearby Defias defenders."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor while outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 11829,
+                "slug": "flamestrike",
+                "name": "Flamestrike",
+                "target": "enemy",
+                "does": "Strike a hostile from your threat list with fire.",
+                "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "quick_flame_ward",
+                "name": "Quick Flame Ward",
+                "target": "self",
+                "does": "Use Quick Flame Ward on yourself in combat.",
+                "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1729,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor while outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1729,
+                "spell": 11829,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
                 "require_aura_absent": false,
                 "max_target_health_pct": null,
                 "timer_mode": "timer",
@@ -7320,6 +8109,2958 @@
           }
         },
         {
+          "id": "deadmines_post_rhahk-79169",
+          "actorId": 79169,
+          "spawnId": 79169,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79172",
+          "actorId": 79172,
+          "spawnId": 79172,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79173",
+          "actorId": 79173,
+          "spawnId": 79173,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79174",
+          "actorId": 79174,
+          "spawnId": 79174,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79175",
+          "actorId": 79175,
+          "spawnId": 79175,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79176",
+          "actorId": 79176,
+          "spawnId": 79176,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79178",
+          "actorId": 79178,
+          "spawnId": 79178,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79179",
+          "actorId": 79179,
+          "spawnId": 79179,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79180",
+          "actorId": 79180,
+          "spawnId": 79180,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79181",
+          "actorId": 79181,
+          "spawnId": 79181,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79182",
+          "actorId": 79182,
+          "spawnId": 79182,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79183",
+          "actorId": 79183,
+          "spawnId": 79183,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79184",
+          "actorId": 79184,
+          "spawnId": 79184,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79185",
+          "actorId": 79185,
+          "spawnId": 79185,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79187",
+          "actorId": 79187,
+          "spawnId": 79187,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79190",
+          "actorId": 79190,
+          "spawnId": 79190,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79191",
+          "actorId": 79191,
+          "spawnId": 79191,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79194",
+          "actorId": 79194,
+          "spawnId": 79194,
+          "entry": 598,
+          "title": "Defias Miner",
+          "identity": "a Defias Miner defending the Deadmines entrance",
+          "characterBrief": {
+            "identity": "Defias Miner at the Deadmines entrance.",
+            "local_goal": "Defend the entrance with nearby Defias.",
+            "allies": [
+              "Nearby Deadmines defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the entrance."
+            ],
+            "relationships": [
+              "Fights beside nearby Defias defenders."
+            ],
+            "temperament": "Defensive and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 598,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Miner at the Deadmines entrance.",
+              "local_goal": "Defend the entrance with nearby Defias.",
+              "allies": [
+                "Nearby Deadmines defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the entrance."
+              ],
+              "relationships": [
+                "Fights beside nearby Defias defenders."
+              ],
+              "temperament": "Defensive and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Miner defending the Deadmines entrance",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "enemy",
+                "does": "Strike the current enemy and weaken its armor.",
+                "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Miner defending the Deadmines entrance",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 598,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  20000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–20000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "enemy",
+                  "does": "Strike the current enemy and weaken its armor.",
+                  "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
           "id": "deadmines_entrance-79144",
           "actorId": 79144,
           "spawnId": 79144,
@@ -7812,6 +11553,170 @@
           }
         },
         {
+          "id": "deadmines_post_rhahk-79170",
+          "actorId": 79170,
+          "spawnId": 79170,
+          "entry": 634,
+          "title": "Defias Overseer Commanding Nearby Deadmines Workers",
+          "identity": "a Defias Overseer commanding nearby Deadmines workers",
+          "characterBrief": {
+            "identity": "Defias Overseer among Deadmines workers.",
+            "local_goal": "Defend the area with nearby workers.",
+            "allies": [
+              "Nearby Deadmines workers and defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the group."
+            ],
+            "relationships": [
+              "Commands nearby Deadmines workers."
+            ],
+            "temperament": "Commanding and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 634,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Overseer among Deadmines workers.",
+              "local_goal": "Defend the area with nearby workers.",
+              "allies": [
+                "Nearby Deadmines workers and defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the group."
+              ],
+              "relationships": [
+                "Commands nearby Deadmines workers."
+              ],
+              "temperament": "Commanding and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Overseer commanding nearby Deadmines workers",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "self",
+                "does": "Use Pierce Armor on yourself in combat.",
+                "tendency": "Open after 2-10 seconds; repeat after 15-25 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Overseer commanding nearby Deadmines workers",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 634,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  25000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–25000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "self",
+                  "does": "Use Pierce Armor on yourself in combat.",
+                  "tendency": "Open after 2-10 seconds; repeat after 15-25 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
           "id": "deadmines_entrance-79189",
           "actorId": 79189,
           "spawnId": 79189,
@@ -7882,6 +11787,170 @@
           "group": {
             "id": "deadmines_entrance",
             "label": "entrance",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": null,
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Overseer commanding nearby Deadmines workers",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 634,
+                "spell": 6016,
+                "initial_ms": [
+                  2000,
+                  10000
+                ],
+                "repeat_ms": [
+                  15000,
+                  25000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "2000–10000 ms",
+                  "repeat": "15000–25000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6016,
+                  "slug": "pierce_armor",
+                  "name": "Pierce Armor",
+                  "target": "self",
+                  "does": "Use Pierce Armor on yourself in combat.",
+                  "tendency": "Open after 2-10 seconds; repeat after 15-25 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
+        {
+          "id": "deadmines_post_rhahk-79244",
+          "actorId": 79244,
+          "spawnId": 79244,
+          "entry": 634,
+          "title": "Defias Overseer Commanding Nearby Deadmines Workers",
+          "identity": "a Defias Overseer commanding nearby Deadmines workers",
+          "characterBrief": {
+            "identity": "Defias Overseer among Deadmines workers.",
+            "local_goal": "Defend the area with nearby workers.",
+            "allies": [
+              "Nearby Deadmines workers and defenders."
+            ],
+            "enemies": [
+              "Visible hostiles threatening the group."
+            ],
+            "relationships": [
+              "Commands nearby Deadmines workers."
+            ],
+            "temperament": "Commanding and group-oriented.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 634,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Overseer among Deadmines workers.",
+              "local_goal": "Defend the area with nearby workers.",
+              "allies": [
+                "Nearby Deadmines workers and defenders."
+              ],
+              "enemies": [
+                "Visible hostiles threatening the group."
+              ],
+              "relationships": [
+                "Commands nearby Deadmines workers."
+              ],
+              "temperament": "Commanding and group-oriented.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Overseer commanding nearby Deadmines workers",
+            "abilities": [
+              {
+                "spell": 6016,
+                "slug": "pierce_armor",
+                "name": "Pierce Armor",
+                "target": "self",
+                "does": "Use Pierce Armor on yourself in combat.",
+                "tendency": "Open after 2-10 seconds; repeat after 15-25 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_post_rhahk",
+            "label": "post rhahk",
             "activation": {
               "mode": "near_player",
               "radius_yards": 60

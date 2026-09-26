@@ -1,7 +1,7 @@
 {
   "source": {
     "behaviorSchema": 3,
-    "behaviorRevision": 26,
+    "behaviorRevision": 27,
     "scenarioSchema": 3,
     "paths": [
       "config/woj-behavior.json",
@@ -10,9 +10,9 @@
     ]
   },
   "status": {
-    "strictAccepted": 6,
+    "strictAccepted": 7,
     "strictTotal": 7,
-    "label": "Six focused encounters have passed strict acceptance. VanCleef stock speech remains unmeasured; full-route, wipe/reset, respawn, save/reload, and two-instance acceptance remain outstanding. This catalog reports configured policy, not invented live state."
+    "label": "All seven focused encounters have passed strict acceptance. This is not full-instance or route acceptance: full-route, wipe/reset, respawn, save/reload, and two-instance acceptance remain outstanding. Literal stock-speech parity is not measured. This catalog reports configured policy, not invented live state."
   },
   "instances": [
     {
@@ -110,9 +110,233 @@
             "mode": "near_player",
             "radius_yards": 60
           }
+        },
+        {
+          "id": "deadmines_cookie",
+          "label": "cookie",
+          "actorCount": 1,
+          "activation": {
+            "mode": "near_player",
+            "radius_yards": 60
+          }
         }
       ],
       "creatures": [
+        {
+          "id": "deadmines_cookie-79344",
+          "actorId": 79344,
+          "spawnId": 79344,
+          "entry": 645,
+          "title": "Cookie",
+          "identity": "Cookie, the Deadmines ship's cook",
+          "characterBrief": {
+            "identity": "Cookie, the Deadmines ship's cook.",
+            "local_goal": "Defend your encounter area.",
+            "allies": [
+              "Nearby Defias defenders."
+            ],
+            "enemies": [
+              "Visible hostile intruders."
+            ],
+            "relationships": [
+              "Ship's cook."
+            ],
+            "temperament": "Hostile when engaged.",
+            "risk": "Holds ground; SmartAI has no flee event.",
+            "knowledge_boundary": "Knows visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No configured speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities, summons, or phases."
+            ]
+          },
+          "sheet": {
+            "entry": 645,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Cookie, the Deadmines ship's cook.",
+              "local_goal": "Defend your encounter area.",
+              "allies": [
+                "Nearby Defias defenders."
+              ],
+              "enemies": [
+                "Visible hostile intruders."
+              ],
+              "relationships": [
+                "Ship's cook."
+              ],
+              "temperament": "Hostile when engaged.",
+              "risk": "Holds ground; SmartAI has no flee event.",
+              "knowledge_boundary": "Knows visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No configured speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities, summons, or phases."
+              ]
+            },
+            "you": "Cookie, the Deadmines ship's cook",
+            "abilities": [
+              {
+                "spell": 6306,
+                "slug": "acid_splash",
+                "name": "Acid Splash",
+                "target": "self",
+                "does": "Use the pinned SmartAI self-cast action.",
+                "tendency": "Open after 1-7 seconds; repeat after 20-25 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 5174,
+                "slug": "cookies_cooking",
+                "name": "Cookie's Cooking",
+                "target": "self",
+                "does": "Use the pinned SmartAI self-cast action.",
+                "tendency": "Open after 10-12 seconds; repeat after 15-25 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold your ground; the pinned SmartAI defines no flee event."
+          },
+          "group": {
+            "id": "deadmines_cookie",
+            "label": "cookie",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_cookie",
+            "version": 3,
+            "role": "primary encounter"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "Cookie, the Deadmines ship's cook",
+            "flee": "Hold your ground; the pinned SmartAI defines no flee event.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 645,
+                "spell": 6306,
+                "initial_ms": [
+                  1000,
+                  7000
+                ],
+                "repeat_ms": [
+                  20000,
+                  25000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–7000 ms",
+                  "repeat": "20000–25000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 6306,
+                  "slug": "acid_splash",
+                  "name": "Acid Splash",
+                  "target": "self",
+                  "does": "Use the pinned SmartAI self-cast action.",
+                  "tendency": "Open after 1-7 seconds; repeat after 20-25 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 645,
+                "spell": 5174,
+                "initial_ms": [
+                  10000,
+                  12000
+                ],
+                "repeat_ms": [
+                  15000,
+                  25000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "10000–12000 ms",
+                  "repeat": "15000–25000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 5174,
+                  "slug": "cookies_cooking",
+                  "name": "Cookie's Cooking",
+                  "target": "self",
+                  "does": "Use the pinned SmartAI self-cast action.",
+                  "tendency": "Open after 10-12 seconds; repeat after 15-25 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": [],
+            "healthEvents": [],
+            "aggroEvents": []
+          }
+        },
         {
           "id": "deadmines_greenskin-79333",
           "actorId": 79333,

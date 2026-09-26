@@ -1,7 +1,7 @@
 {
   "source": {
     "behaviorSchema": 3,
-    "behaviorRevision": 22,
+    "behaviorRevision": 23,
     "scenarioSchema": 3,
     "paths": [
       "config/woj-behavior.json",
@@ -10,7 +10,7 @@
     ]
   },
   "status": {
-    "strictAccepted": 3,
+    "strictAccepted": 4,
     "strictTotal": 7,
     "label": "Strict encounter acceptance is in progress. This catalog reports configured policy, not a claim that every Deadmines NPC is accepted."
   },
@@ -92,9 +92,238 @@
             "mode": "near_player",
             "radius_yards": 60
           }
+        },
+        {
+          "id": "deadmines_greenskin",
+          "label": "greenskin",
+          "actorCount": 5,
+          "activation": {
+            "mode": "near_player",
+            "radius_yards": 60
+          }
         }
       ],
       "creatures": [
+        {
+          "id": "deadmines_greenskin-79333",
+          "actorId": 79333,
+          "spawnId": 79333,
+          "entry": 647,
+          "title": "Creature 647",
+          "identity": "Captain Greenskin leading a Defias patrol on the ship",
+          "characterBrief": {
+            "identity": "Captain Greenskin, ship captain.",
+            "local_goal": "Lead your patrol.",
+            "allies": [
+              "Linked pirate and Squallshaper.",
+              "Ship defenders."
+            ],
+            "enemies": [
+              "Visible intruders."
+            ],
+            "relationships": [
+              "Leads a three-member formation."
+            ],
+            "temperament": "Aggressive and direct.",
+            "risk": "Holds ground; never flees.",
+            "knowledge_boundary": "Knows only visible state, kin, triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use eligible actions and targets.",
+              "Do not invent facts or abilities.",
+              "Keep the native patrol route."
+            ]
+          },
+          "sheet": {
+            "entry": 647,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Captain Greenskin, ship captain.",
+              "local_goal": "Lead your patrol.",
+              "allies": [
+                "Linked pirate and Squallshaper.",
+                "Ship defenders."
+              ],
+              "enemies": [
+                "Visible intruders."
+              ],
+              "relationships": [
+                "Leads a three-member formation."
+              ],
+              "temperament": "Aggressive and direct.",
+              "risk": "Holds ground; never flees.",
+              "knowledge_boundary": "Knows only visible state, kin, triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use eligible actions and targets.",
+                "Do not invent facts or abilities.",
+                "Keep the native patrol route."
+              ]
+            },
+            "you": "Captain Greenskin leading a Defias patrol on the ship",
+            "abilities": [
+              {
+                "spell": 40505,
+                "slug": "cleave",
+                "name": "Cleave",
+                "target": "enemy",
+                "does": "Strike your current highest-threat victim in melee.",
+                "tendency": "Open after 1-7 seconds; repeat after 10-15 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 5208,
+                "slug": "poisoned_harpoon",
+                "name": "Poisoned Harpoon",
+                "target": "enemy",
+                "does": "Throw at one random hostile within ten yards.",
+                "tendency": "Open after 10-12 seconds; repeat after 25-35 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "Hold your ground; your original captain behavior does not flee."
+          },
+          "group": {
+            "id": "deadmines_greenskin",
+            "label": "greenskin",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_greenskin",
+            "version": 1,
+            "role": "primary encounter"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "Captain Greenskin leading a Defias patrol on the ship",
+            "flee": "Hold your ground; your original captain behavior does not flee.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 647,
+                "spell": 40505,
+                "initial_ms": [
+                  1000,
+                  7000
+                ],
+                "repeat_ms": [
+                  10000,
+                  15000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "victim",
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–7000 ms",
+                  "repeat": "10000–15000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 40505,
+                  "slug": "cleave",
+                  "name": "Cleave",
+                  "target": "enemy",
+                  "does": "Strike your current highest-threat victim in melee.",
+                  "tendency": "Open after 1-7 seconds; repeat after 10-15 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 647,
+                "spell": 5208,
+                "initial_ms": [
+                  10000,
+                  12000
+                ],
+                "repeat_ms": [
+                  25000,
+                  35000
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 10,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": true,
+                "max_distance_yards": 10,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "10000–12000 ms",
+                  "repeat": "25000–35000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 5208,
+                  "slug": "poisoned_harpoon",
+                  "name": "Poisoned Harpoon",
+                  "target": "enemy",
+                  "does": "Throw at one random hostile within ten yards.",
+                  "tendency": "Open after 10-12 seconds; repeat after 25-35 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": false,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
         {
           "id": "deadmines_smite-79345",
           "actorId": 79345,
@@ -11009,6 +11238,792 @@
           }
         },
         {
+          "id": "deadmines_greenskin-79327",
+          "actorId": 79327,
+          "spawnId": 79327,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_greenskin",
+            "label": "greenskin",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_greenskin",
+            "version": 1,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_greenskin-79329",
+          "actorId": 79329,
+          "spawnId": 79329,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_greenskin",
+            "label": "greenskin",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_greenskin",
+            "version": 1,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_greenskin-79335",
+          "actorId": 79335,
+          "spawnId": 79335,
+          "entry": 1732,
+          "title": "Defias Squallshaper",
+          "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+          "characterBrief": {
+            "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+            "local_goal": "Defend the nearby crew and ship approach.",
+            "allies": [
+              "Nearby Defias pirates and ship defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Moves with a linked Defias Pirate."
+            ],
+            "temperament": "Defensive and magic-focused.",
+            "risk": "Seeks nearby Defias help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent unseen facts or abilities."
+            ]
+          },
+          "sheet": {
+            "entry": 1732,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Defias Squallshaper beside the Deadmines ship crew.",
+              "local_goal": "Defend the nearby crew and ship approach.",
+              "allies": [
+                "Nearby Defias pirates and ship defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Moves with a linked Defias Pirate."
+              ],
+              "temperament": "Defensive and magic-focused.",
+              "risk": "Seeks nearby Defias help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent unseen facts or abilities."
+              ]
+            },
+            "you": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "abilities": [
+              {
+                "spell": 12544,
+                "slug": "frost_armor",
+                "name": "Frost Armor",
+                "target": "self",
+                "does": "Protect yourself with Frost Armor outside combat.",
+                "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 2138,
+                "slug": "fire_blast",
+                "name": "Fire Blast",
+                "target": "enemy",
+                "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                "ally_below_pct": null
+              },
+              {
+                "spell": 4979,
+                "slug": "frost_nova",
+                "name": "Frost Nova",
+                "target": "self",
+                "does": "Cast Frost Nova around yourself in combat.",
+                "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                "ally_below_pct": null
+              }
+            ],
+            "flee": "When nearly dead, run to find nearby Defias help."
+          },
+          "group": {
+            "id": "deadmines_greenskin",
+            "label": "greenskin",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_greenskin",
+            "version": 1,
+            "role": "scenario participant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Defias Squallshaper defending the Deadmines ship approach with frost and fire magic",
+            "flee": "When nearly dead, run to find nearby Defias help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [
+              {
+                "entry": 1732,
+                "spell": 12544,
+                "initial_ms": [
+                  1000,
+                  1000
+                ],
+                "repeat_ms": [
+                  1200000,
+                  1200000
+                ],
+                "ticks_out_of_combat": true,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": false,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1000–1000 ms",
+                  "repeat": "1200000–1200000 ms"
+                },
+                "sheetAbility": {
+                  "spell": 12544,
+                  "slug": "frost_armor",
+                  "name": "Frost Armor",
+                  "target": "self",
+                  "does": "Protect yourself with Frost Armor outside combat.",
+                  "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 2138,
+                "initial_ms": [
+                  0,
+                  1200
+                ],
+                "repeat_ms": [
+                  3100,
+                  17100
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "enemy",
+                "target_selector": "hostile_random",
+                "target_radius_yards": 20,
+                "allow_self": false,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": 20,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "0–1200 ms",
+                  "repeat": "3100–17100 ms"
+                },
+                "sheetAbility": {
+                  "spell": 2138,
+                  "slug": "fire_blast",
+                  "name": "Fire Blast",
+                  "target": "enemy",
+                  "does": "Strike one server-selected hostile from your threat list within twenty yards.",
+                  "tendency": "Open within 1.2 seconds of combat; repeat after 3.1-17.1 seconds.",
+                  "ally_below_pct": null
+                }
+              },
+              {
+                "entry": 1732,
+                "spell": 4979,
+                "initial_ms": [
+                  1100,
+                  21100
+                ],
+                "repeat_ms": [
+                  42600,
+                  63500
+                ],
+                "ticks_out_of_combat": false,
+                "chance_pct": 100,
+                "target": "self",
+                "allow_self": true,
+                "require_caster_combat": true,
+                "require_target_in_combat": false,
+                "require_engaged": false,
+                "max_distance_yards": null,
+                "require_aura_absent": false,
+                "max_target_health_pct": null,
+                "timer_mode": "timer",
+                "once_per_epoch": false,
+                "completion": "cast",
+                "timings": {
+                  "initial": "1100–21100 ms",
+                  "repeat": "42600–63500 ms"
+                },
+                "sheetAbility": {
+                  "spell": 4979,
+                  "slug": "frost_nova",
+                  "name": "Frost Nova",
+                  "target": "self",
+                  "does": "Cast Frost Nova around yourself in combat.",
+                  "tendency": "Open after 1.1-21.1 seconds; repeat after 42.6-63.5 seconds.",
+                  "ally_below_pct": null
+                }
+              }
+            ],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
           "id": "deadmines_smite-79338",
           "actorId": 79338,
           "spawnId": 79338,
@@ -18537,6 +19552,125 @@
                 "flee_enabled": false
               }
             ],
+            "createdBy": null,
+            "deathEffects": [],
+            "healthPhases": []
+          }
+        },
+        {
+          "id": "deadmines_greenskin-79309",
+          "actorId": 79309,
+          "spawnId": 79309,
+          "entry": 3947,
+          "title": "Goblin Shipbuilder",
+          "identity": "a Goblin Shipbuilder defending your work area near Mr. Smite in the Deadmines",
+          "characterBrief": {
+            "identity": "Goblin Shipbuilder working on the Deadmines ship.",
+            "local_goal": "Defend your work area and nearby crew.",
+            "allies": [
+              "Nearby ship crew and Defias defenders."
+            ],
+            "enemies": [
+              "Visible ship intruders."
+            ],
+            "relationships": [
+              "Works beside a Defias Pirate near Mr. Smite."
+            ],
+            "temperament": "Defensive.",
+            "risk": "Seeks nearby help when nearly dead.",
+            "knowledge_boundary": "Knows only visible state, nearby kin, and listed triggers.",
+            "voice": "No authored voice style.",
+            "speech": "No authored speech behavior.",
+            "constraints": [
+              "Use only eligible actions and targets.",
+              "Do not invent abilities.",
+              "Preserve native wander and respawn."
+            ]
+          },
+          "sheet": {
+            "entry": 3947,
+            "schema_version": 2,
+            "character_brief": {
+              "identity": "Goblin Shipbuilder working on the Deadmines ship.",
+              "local_goal": "Defend your work area and nearby crew.",
+              "allies": [
+                "Nearby ship crew and Defias defenders."
+              ],
+              "enemies": [
+                "Visible ship intruders."
+              ],
+              "relationships": [
+                "Works beside a Defias Pirate near Mr. Smite."
+              ],
+              "temperament": "Defensive.",
+              "risk": "Seeks nearby help when nearly dead.",
+              "knowledge_boundary": "Knows only visible state, nearby kin, and listed triggers.",
+              "voice": "No authored voice style.",
+              "speech": "No authored speech behavior.",
+              "constraints": [
+                "Use only eligible actions and targets.",
+                "Do not invent abilities.",
+                "Preserve native wander and respawn."
+              ]
+            },
+            "you": "a Goblin Shipbuilder defending your work area near Mr. Smite in the Deadmines",
+            "abilities": [],
+            "flee": "When nearly dead, run to find nearby help."
+          },
+          "group": {
+            "id": "deadmines_greenskin",
+            "label": "greenskin",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            }
+          },
+          "scenario": {
+            "id": "deadmines_greenskin",
+            "version": 1,
+            "role": "optional assistant"
+          },
+          "runtime": false,
+          "original": {
+            "identity": "a Goblin Shipbuilder defending your work area near Mr. Smite in the Deadmines",
+            "flee": "When nearly dead, run to find nearby help.",
+            "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+          },
+          "jev": {
+            "control": "jev",
+            "activation": {
+              "mode": "near_player",
+              "radius_yards": 60
+            },
+            "spells": [],
+            "flee": {
+              "enabled": true,
+              "max_health_pct": 15,
+              "once_per_epoch": true,
+              "require_in_combat": true,
+              "require_not_casting": true,
+              "require_engaged": true,
+              "max_distance_yards": 40
+            },
+            "aggroTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0
+            },
+            "ambientTalk": {
+              "enabled": false,
+              "chance_pct": 0,
+              "text_group": 0,
+              "initial_ms": [
+                0,
+                0
+              ],
+              "repeat_ms": [
+                0,
+                0
+              ]
+            },
+            "summons": [],
             "createdBy": null,
             "deathEffects": [],
             "healthPhases": []

@@ -1,35 +1,4452 @@
 {
   "schema_version": 3,
-  "revision": 1,
+  "revision": 40,
   "groups": [
     {
-      "id": "murlocs",
+      "id": "deadmines_entrance",
       "enabled": true,
-      "map_id": 0,
+      "map_id": 36,
       "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
       "actors": [
         {
-          "spawn_id": 123456789,
-          "entry": 127,
+          "spawn_id": 79127,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79128,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79129,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79130,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79131,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79133,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79134,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79135,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79136,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79137,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79138,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79139,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79140,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79142,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79143,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79144,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79145,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79146,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79158,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79188,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79189,
+          "entry": 634,
           "control": "inherit",
           "aggro_talk": false
         }
       ],
       "spells": [
         {
-          "entry": 127,
-          "spell": 11831,
+          "entry": 1729,
+          "spell": 12544,
           "initial_ms": [
-            2000,
-            7300
+            1000,
+            1000
           ],
           "repeat_ms": [
-            17200,
-            31400
+            1200000,
+            1200000
           ],
           "ticks_out_of_combat": true,
           "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 598,
+          "spell": 6016,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
           "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4416,
+          "spell": 6016,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 11829,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_entrance_side_patrol",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79277,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79373,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79374,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1729,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 11829,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_rhahk_approach",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79148,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79149,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79151,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79152,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79154,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79155,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79156,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79157,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79159,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79160,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79161,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79162,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79163,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79164,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        }
+      ],
+      "spells": [
+        {
+          "entry": 598,
+          "spell": 6016,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_rhahk_watchmen",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79165,
+          "entry": 1725,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79167,
+          "entry": 1725,
+          "control": "inherit",
+          "aggro_talk": false
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1725,
+          "spell": 6660,
+          "initial_ms": [
+            0,
+            0
+          ],
+          "repeat_ms": [
+            2000,
+            2000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": false,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_rhahk_boss",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79168,
+          "entry": 644,
+          "control": "inherit",
+          "aggro_talk": true
+        }
+      ],
+      "death_effects": [
+        {
+          "id": "rhahk_zor",
+          "type": "activate_gameobject",
+          "actor_id": 79168,
+          "entry": 644,
+          "gameobject_spawn_id": 30533,
+          "gameobject_entry": 13965,
+          "initial_object_state": 1,
+          "final_object_state": 0,
+          "instance_data_index": 0,
+          "initial_instance_data_value": 0,
+          "instance_data_value": 3,
+          "instance_save_token_index": 2
+        }
+      ],
+      "spells": [
+        {
+          "entry": 644,
+          "spell": 6304,
+          "initial_ms": [
+            800,
+            8500
+          ],
+          "repeat_ms": [
+            11000,
+            17200
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": false,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": true,
+        "chance_pct": 100,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_mast_workshop_fringe",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79219,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79224,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79225,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79226,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79229,
+          "entry": 4418,
+          "control": "inherit",
+          "aggro_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79230,
+          "entry": 4417,
+          "control": "inherit",
+          "aggro_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true,
+          "preferred_combat_range_yards": 25.0,
+          "executor_repeat_continuation_spell": 6660
+        },
+        {
+          "spawn_id": 79232,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79233,
+          "entry": 4417,
+          "control": "inherit",
+          "aggro_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true,
+          "preferred_combat_range_yards": 25.0
+        },
+        {
+          "spawn_id": 79234,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79235,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79236,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79237,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79238,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79239,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79240,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79241,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79376,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79377,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 641,
+          "spell": 6466,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 641,
+          "spell": 40505,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            7000,
+            12000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4416,
+          "spell": 6016,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4417,
+          "spell": 6660,
+          "initial_ms": [
+            0,
+            0
+          ],
+          "repeat_ms": [
+            2000,
+            2000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "min_snapshot_distance_yards": 12.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4417,
+          "spell": 6685,
+          "initial_ms": [
+            3000,
+            8000
+          ],
+          "repeat_ms": [
+            12000,
+            12000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 30.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4418,
+          "spell": 9053,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            3000,
+            4000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4418,
+          "spell": 113,
+          "initial_ms": [
+            3000,
+            8000
+          ],
+          "repeat_ms": [
+            20000,
+            30000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 30.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": true,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4418,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 11829,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_mast_upper_craftsmen",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79199,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79200,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1731,
+          "spell": 5159,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            35000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_post_rhahk",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79169,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79170,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79171,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79172,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79173,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79174,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79175,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79176,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79177,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79178,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79179,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79180,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79181,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79182,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79183,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79184,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79185,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79187,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79190,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79191,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79194,
+          "entry": 598,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79244,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79245,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79273,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79280,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79281,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 84079,
+          "entry": 3586,
+          "control": "inherit",
+          "aggro_talk": false,
+          "flee_enabled": false,
+          "ai_init_despawn": {
+            "chance_pct": 60,
+            "delay_ms": 500
+          }
+        }
+      ],
+      "spells": [
+        {
+          "entry": 598,
+          "spell": 6016,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 11829,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 3586,
+          "spell": 12097,
+          "initial_ms": [
+            1000,
+            7000
+          ],
+          "repeat_ms": [
+            20000,
+            25000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "target_radius_yards": null,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_sneed_room",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79192,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79193,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79195,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79202,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79207,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79220,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79221,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79222,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79227,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "spawn_id": 79231,
+          "entry": 641,
+          "control": "inherit",
+          "aggro_talk": false
+        }
+      ],
+      "spells": [
+        {
+          "entry": 641,
+          "spell": 6466,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 641,
+          "spell": 40505,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            7000,
+            12000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_sneed",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79223,
+          "entry": 642,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "runtime_summons": [
+        {
+          "actor_id": 2147484291,
+          "entry": 643,
+          "source_actor_id": 79223,
+          "created_by_spell": 5141,
+          "control": "inherit",
+          "aggro_talk": false
+        }
+      ],
+      "death_effects": [
+        {
+          "id": "sneed_shredder_eject",
+          "type": "cast_spell",
+          "actor_id": 79223,
+          "entry": 642,
+          "spell": 5141,
+          "expected_summon_actor_id": 2147484291,
+          "expected_summon_count": 1
+        },
+        {
+          "id": "sneed_mast_room",
+          "type": "activate_gameobject",
+          "actor_id": 2147484291,
+          "entry": 643,
+          "gameobject_spawn_id": 26185,
+          "gameobject_entry": 16400,
+          "initial_object_state": 1,
+          "final_object_state": 0
+        }
+      ],
+      "spells": [
+        {
+          "entry": 642,
+          "spell": 7399,
+          "initial_ms": [
+            7000,
+            7000
+          ],
+          "repeat_ms": [
+            15000,
+            15000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 5.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 5.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 642,
+          "spell": 3603,
+          "initial_ms": [
+            4000,
+            4000
+          ],
+          "repeat_ms": [
+            15000,
+            15000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 643,
+          "spell": 6713,
+          "initial_ms": [
+            1000,
+            7000
+          ],
+          "repeat_ms": [
+            20000,
+            25000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": false,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_gilnid",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79196,
+          "entry": 622,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79197,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79198,
+          "entry": 622,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79201,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79203,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79204,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79205,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79206,
+          "entry": 1763,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": true,
+          "preserve_stock_routine": true,
+          "flee_enabled": false
+        },
+        {
+          "spawn_id": 79208,
+          "entry": 622,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79209,
+          "entry": 622,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79210,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79211,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79212,
+          "entry": 622,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79213,
+          "entry": 622,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79214,
+          "entry": 4417,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "spawn_id": 79215,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79216,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79217,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79218,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79242,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79243,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79247,
+          "entry": 1731,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79248,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79249,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79250,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79251,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79252,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79253,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79255,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79256,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79257,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79258,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79259,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79260,
+          "entry": 4418,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "spawn_id": 79261,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79271,
+          "entry": 4416,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79296,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79360,
+          "entry": 1729,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79361,
+          "entry": 634,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        }
+      ],
+      "runtime_summons": [
+        {
+          "actor_id": 2147486169,
+          "entry": 2520,
+          "source_actor_id": 79196,
+          "created_by_spell": 3605,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147486170,
+          "entry": 2520,
+          "source_actor_id": 79198,
+          "created_by_spell": 3605,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147486171,
+          "entry": 2520,
+          "source_actor_id": 79208,
+          "created_by_spell": 3605,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147486168,
+          "entry": 2520,
+          "source_actor_id": 79209,
+          "created_by_spell": 3605,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147486172,
+          "entry": 2520,
+          "source_actor_id": 79212,
+          "created_by_spell": 3605,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147486173,
+          "entry": 2520,
+          "source_actor_id": 79213,
+          "created_by_spell": 3605,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        }
+      ],
+      "death_effects": [
+        {
+          "id": "gilnid_foundry_door",
+          "type": "activate_gameobject",
+          "actor_id": 79206,
+          "entry": 1763,
+          "gameobject_spawn_id": 26182,
+          "gameobject_entry": 16399,
+          "initial_object_state": 1,
+          "final_object_state": 0
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1731,
+          "spell": 5159,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            35000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 622,
+          "spell": 6660,
+          "initial_ms": [
+            0,
+            0
+          ],
+          "repeat_ms": [
+            2000,
+            2000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 622,
+          "spell": 3605,
+          "initial_ms": [
+            1000,
+            9000
+          ],
+          "repeat_ms": [
+            35000,
+            35000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4416,
+          "spell": 6016,
+          "initial_ms": [
+            2000,
+            10000
+          ],
+          "repeat_ms": [
+            15000,
+            20000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4417,
+          "spell": 6660,
+          "initial_ms": [
+            0,
+            0
+          ],
+          "repeat_ms": [
+            2000,
+            2000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4417,
+          "spell": 6685,
+          "initial_ms": [
+            3000,
+            8000
+          ],
+          "repeat_ms": [
+            12000,
+            12000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 30.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4418,
+          "spell": 9053,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            3000,
+            4000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4418,
+          "spell": 113,
+          "initial_ms": [
+            3000,
+            8000
+          ],
+          "repeat_ms": [
+            20000,
+            30000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 30.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 30.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 4418,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 11829,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1729,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1763,
+          "spell": 5213,
+          "initial_ms": [
+            1000,
+            6000
+          ],
+          "repeat_ms": [
+            15000,
+            25000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": true,
+        "initial_ms": [
+          120000,
+          120000
+        ],
+        "repeat_ms": [
+          120000,
+          120000
+        ],
+        "chance_pct": 100,
+        "text_group": 0
+      },
+      "go_runtime_summons": [
+        {
+          "actor_id": 2147487310,
+          "entry": 1732,
+          "source_go_spawn_id": 26205,
+          "source_go_entry": 16398,
+          "trigger": "item_cast",
+          "item_spell": 6250,
+          "summon_index": 1,
+          "position": {
+            "x": -100.73,
+            "y": -709.36,
+            "z": 8.96
+          },
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "actor_id": 2147487311,
+          "entry": 1732,
+          "source_go_spawn_id": 26205,
+          "source_go_entry": 16398,
+          "trigger": "item_cast",
+          "item_spell": 6250,
+          "summon_index": 2,
+          "position": {
+            "x": -90.2,
+            "y": -708.74,
+            "z": 8.88
+          },
+          "control": "inherit",
+          "aggro_talk": false
+        },
+        {
+          "actor_id": 2147487312,
+          "entry": 4417,
+          "source_go_spawn_id": 26203,
+          "source_go_entry": 17155,
+          "trigger": "report_use",
+          "summon_index": 1,
+          "position": {
+            "x": -123.77,
+            "y": -613.586,
+            "z": 14.126
+          },
+          "control": "inherit",
+          "aggro_talk": false,
+          "flee_enabled": false,
+          "preferred_combat_range_yards": 25.0
+        }
+      ]
+    },
+    {
+      "id": "ship_lower_approach",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79262,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79286,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79287,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79293,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79294,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79298,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79299,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "ship_lower_corridor",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79301,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79302,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79306,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "ship_mid_lower_deck",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79303,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79312,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79314,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79304,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79320,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79353,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79354,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "ship_mid_upper_deck",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79310,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79315,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79319,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79326,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "cookie_room_rim",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79347,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79351,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "aft_lower_ship",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79355,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79385,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79390,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "once_per_epoch": false,
+          "completion": "cast",
+          "timer_mode": "timer"
+        }
+      ],
+      "flee": {
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_smite",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79337,
+          "entry": 646,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79345,
+          "entry": 636,
+          "control": "inherit",
+          "aggro_talk": true,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79346,
+          "entry": 636,
+          "control": "inherit",
+          "aggro_talk": true,
+          "ambient_talk": false
+        },
+        {
+          "spawn_id": 79313,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79322,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79325,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79338,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true
+        },
+        {
+          "spawn_id": 79352,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79292,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79297,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79300,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79305,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79307,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79308,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79311,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79316,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79321,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79323,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79324,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79328,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79330,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79334,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79340,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79341,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79343,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79348,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79349,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79384,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79388,
+          "entry": 657,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "runtime_summons": [
+        {
+          "actor_id": 2147487200,
+          "entry": 3450,
+          "source_actor_id": 79292,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487201,
+          "entry": 3450,
+          "source_actor_id": 79297,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487202,
+          "entry": 3450,
+          "source_actor_id": 79300,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487203,
+          "entry": 3450,
+          "source_actor_id": 79305,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487204,
+          "entry": 3450,
+          "source_actor_id": 79307,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487205,
+          "entry": 3450,
+          "source_actor_id": 79308,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487206,
+          "entry": 3450,
+          "source_actor_id": 79311,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487207,
+          "entry": 3450,
+          "source_actor_id": 79316,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487208,
+          "entry": 3450,
+          "source_actor_id": 79321,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487209,
+          "entry": 3450,
+          "source_actor_id": 79323,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487210,
+          "entry": 3450,
+          "source_actor_id": 79324,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487211,
+          "entry": 3450,
+          "source_actor_id": 79328,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487212,
+          "entry": 3450,
+          "source_actor_id": 79330,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487213,
+          "entry": 3450,
+          "source_actor_id": 79334,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487214,
+          "entry": 3450,
+          "source_actor_id": 79340,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487215,
+          "entry": 3450,
+          "source_actor_id": 79341,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487216,
+          "entry": 3450,
+          "source_actor_id": 79343,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487217,
+          "entry": 3450,
+          "source_actor_id": 79348,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487218,
+          "entry": 3450,
+          "source_actor_id": 79349,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487219,
+          "entry": 3450,
+          "source_actor_id": 79384,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487220,
+          "entry": 3450,
+          "source_actor_id": 79388,
+          "created_by_spell": 5172,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        }
+      ],
+      "health_phases": [
+        {
+          "id": "smite_two_swords",
+          "actor_id": 79337,
+          "entry": 646,
+          "trigger_below_health_pct": 67,
+          "transition_spell": 6432,
+          "talk_group": 2,
+          "destination": {
+            "x": 1.859,
+            "y": -780.72,
+            "z": 9.831,
+            "o": 5.558
+          },
+          "equipment_id": 2,
+          "dual_wield": true,
+          "equipment_delay_ms": 1500,
+          "restore_combat_ms": 3000,
+          "tactical_delay_ms": 10000
+        },
+        {
+          "id": "smite_hammer",
+          "actor_id": 79337,
+          "entry": 646,
+          "trigger_below_health_pct": 34,
+          "transition_spell": 6432,
+          "talk_group": 3,
+          "destination": {
+            "x": 1.859,
+            "y": -780.72,
+            "z": 9.831,
+            "o": 5.558
+          },
+          "equipment_id": 3,
+          "dual_wield": false,
+          "equipment_delay_ms": 1500,
+          "restore_combat_ms": 3000,
+          "tactical_delay_ms": 10000
+        }
+      ],
+      "spells": [
+        {
+          "entry": 646,
+          "spell": 6435,
+          "initial_ms": [
+            3000,
+            3000
+          ],
+          "repeat_ms": [
+            6000,
+            6000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "max_caster_health_pct": 33,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 636,
+          "spell": 6408,
+          "initial_ms": [
+            0,
+            0
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": true,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 657,
+          "spell": 5172,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            0,
+            0
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_caster_out_of_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": true,
+          "completion": "cast"
+        },
+        {
+          "entry": 1732,
+          "spell": 12544,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": false,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": true,
+        "chance_pct": 100,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_greenskin",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79333,
+          "entry": 647,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79335,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79309,
+          "entry": 3947,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79327,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79329,
+          "entry": 1732,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": true,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 647,
+          "spell": 40505,
+          "initial_ms": [
+            1000,
+            7000
+          ],
+          "repeat_ms": [
+            10000,
+            15000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "victim",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 647,
+          "spell": 5208,
+          "initial_ms": [
+            10000,
+            12000
+          ],
+          "repeat_ms": [
+            25000,
+            35000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 10.0,
           "allow_self": false,
           "require_caster_combat": true,
           "require_target_in_combat": false,
@@ -42,25 +4459,77 @@
           "completion": "cast"
         },
         {
-          "entry": 127,
-          "spell": 744,
+          "entry": 1732,
+          "spell": 12544,
           "initial_ms": [
-            6600,
-            10200
+            1000,
+            1000
           ],
           "repeat_ms": [
-            19500,
-            31800
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1732,
+          "spell": 2138,
+          "initial_ms": [
+            0,
+            1200
+          ],
+          "repeat_ms": [
+            3100,
+            17100
           ],
           "ticks_out_of_combat": false,
-          "chance_pct": 80,
+          "chance_pct": 100,
           "target": "enemy",
+          "target_selector": "hostile_random",
+          "target_radius_yards": 20.0,
           "allow_self": false,
           "require_caster_combat": true,
           "require_target_in_combat": false,
           "require_engaged": false,
+          "max_distance_yards": 20.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 1732,
+          "spell": 4979,
+          "initial_ms": [
+            1100,
+            21100
+          ],
+          "repeat_ms": [
+            42600,
+            63500
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
           "max_distance_yards": null,
-          "require_aura_absent": true,
+          "require_aura_absent": false,
           "max_target_health_pct": null,
           "timer_mode": "timer",
           "once_per_epoch": false,
@@ -69,6 +4538,417 @@
       ],
       "flee": {
         "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_vancleef",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79336,
+          "entry": 639,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79369,
+          "entry": 636,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true
+        },
+        {
+          "spawn_id": 79370,
+          "entry": 636,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "runtime_summons": [
+        {
+          "actor_id": 2147487300,
+          "entry": 636,
+          "source_actor_id": 79336,
+          "created_by_spell": 5200,
+          "summon_index": 1,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        },
+        {
+          "actor_id": 2147487301,
+          "entry": 636,
+          "source_actor_id": 79336,
+          "created_by_spell": 5200,
+          "summon_index": 2,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false
+        }
+      ],
+      "health_events": [
+        {
+          "id": "vancleef_mid_talk",
+          "actor_id": 79336,
+          "entry": 639,
+          "health_pct_min": 34,
+          "health_pct_max": 66,
+          "actions": [
+            {
+              "kind": "talk",
+              "text_group": 1
+            }
+          ]
+        },
+        {
+          "id": "vancleef_allies",
+          "actor_id": 79336,
+          "entry": 639,
+          "health_pct_min": 0,
+          "health_pct_max": 50,
+          "actions": [
+            {
+              "kind": "cast",
+              "spell": 5200,
+              "target": "self"
+            },
+            {
+              "kind": "talk",
+              "text_group": 2
+            }
+          ]
+        },
+        {
+          "id": "vancleef_low_talk",
+          "actor_id": 79336,
+          "entry": 639,
+          "health_pct_min": 0,
+          "health_pct_max": 33,
+          "actions": [
+            {
+              "kind": "talk",
+              "text_group": 3
+            }
+          ]
+        }
+      ],
+      "aggro_events": [
+        {
+          "id": "vancleef_aggro",
+          "actor_id": 79336,
+          "entry": 639,
+          "actions": [
+            {
+              "kind": "talk",
+              "text_group": 0
+            }
+          ]
+        },
+        {
+          "id": "blackguard_79369_aggro",
+          "actor_id": 79369,
+          "entry": 636,
+          "actions": [
+            {
+              "kind": "cast",
+              "spell": 1833,
+              "target": "aggro_invoker"
+            },
+            {
+              "kind": "remove_aura",
+              "spell": 6408,
+              "target": "self"
+            },
+            {
+              "kind": "talk",
+              "text_group": 0
+            }
+          ]
+        },
+        {
+          "id": "blackguard_79370_aggro",
+          "actor_id": 79370,
+          "entry": 636,
+          "actions": [
+            {
+              "kind": "cast",
+              "spell": 1833,
+              "target": "aggro_invoker"
+            },
+            {
+              "kind": "remove_aura",
+              "spell": 6408,
+              "target": "self"
+            },
+            {
+              "kind": "talk",
+              "text_group": 0
+            }
+          ]
+        },
+        {
+          "id": "blackguard_7300_aggro",
+          "actor_id": 2147487300,
+          "entry": 636,
+          "actions": [
+            {
+              "kind": "cast",
+              "spell": 1833,
+              "target": "aggro_invoker"
+            },
+            {
+              "kind": "remove_aura",
+              "spell": 6408,
+              "target": "self"
+            },
+            {
+              "kind": "talk",
+              "text_group": 0
+            }
+          ]
+        },
+        {
+          "id": "blackguard_7301_aggro",
+          "actor_id": 2147487301,
+          "entry": 636,
+          "actions": [
+            {
+              "kind": "cast",
+              "spell": 1833,
+              "target": "aggro_invoker"
+            },
+            {
+              "kind": "remove_aura",
+              "spell": 6408,
+              "target": "self"
+            },
+            {
+              "kind": "talk",
+              "text_group": 0
+            }
+          ]
+        }
+      ],
+      "spells": [
+        {
+          "entry": 639,
+          "spell": 674,
+          "initial_ms": [
+            1000,
+            1000
+          ],
+          "repeat_ms": [
+            0,
+            0
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_caster_out_of_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": true,
+          "completion": "cast"
+        },
+        {
+          "entry": 636,
+          "spell": 6408,
+          "initial_ms": [
+            0,
+            0
+          ],
+          "repeat_ms": [
+            1200000,
+            1200000
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": false,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": true,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 636,
+          "spell": 14903,
+          "initial_ms": [
+            3000,
+            10000
+          ],
+          "repeat_ms": [
+            10000,
+            15000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": false,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": true,
+        "chance_pct": 100,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    },
+    {
+      "id": "deadmines_cookie",
+      "enabled": true,
+      "map_id": 36,
+      "control": "original",
+      "activation": {
+        "mode": "near_player",
+        "radius_yards": 60.0
+      },
+      "actors": [
+        {
+          "spawn_id": 79344,
+          "entry": 645,
+          "control": "inherit",
+          "aggro_talk": false,
+          "ambient_talk": false,
+          "flee_enabled": false,
+          "preserve_stock_routine": true
+        }
+      ],
+      "spells": [
+        {
+          "entry": 645,
+          "spell": 6306,
+          "initial_ms": [
+            1000,
+            7000
+          ],
+          "repeat_ms": [
+            20000,
+            25000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 645,
+          "spell": 5174,
+          "initial_ms": [
+            10000,
+            12000
+          ],
+          "repeat_ms": [
+            15000,
+            25000
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 100,
+          "target": "self",
+          "allow_self": true,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": false,
         "max_health_pct": 15,
         "once_per_epoch": true,
         "require_in_combat": true,

@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""Select original AI or Jev for the shipped Deadmines policy, without a build."""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from pathlib import Path
+import tempfile
+
+from woj_gateway.policy import validate_policy_file, validate_policy_transition
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("policy", type=Path)
+    parser.add_argument("mode", choices=("original", "jev"))
+    args = parser.parse_args()
+    path = args.policy.resolve(strict=True)
+    validate_policy_file(path)
+    old = path.read_bytes()
+    policy = json.loads(old)
+    groups = policy.get("groups", [])
+    if policy["schema_version"] != 3 or not groups or any(g["map_id"] != 36 for g in groups):
+        parser.error("expected a schema-v3, Deadmines-only policy")
+    for group in groups:
+        for field in ("actors", "runtime_summons", "go_runtime_summons"):
+            if any(a.get("control", "inherit") != "inherit" for a in group.get(field, [])):
+                parser.error("explicit actor ownership found; review it before a dungeon-wide switch")
+    if all(g["control"] == args.mode for g in groups):
+        print(f"Already {args.mode}; revision {policy['revision']} unchanged")
+        return
+    for group in groups:
+        group["control"] = args.mode
+    policy["revision"] += 1
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", dir=path.parent, prefix=f".{path.name}.", delete=False) as stream:
+            temporary = Path(stream.name)
+            json.dump(policy, stream, indent=2)
+            stream.write("\n")
+        validate_policy_transition(temporary, path)
+        if path.read_bytes() != old:
+            raise RuntimeError("policy changed concurrently; retry after reviewing the new file")
+        temporary.chmod(path.stat().st_mode & 0o777)
+        os.replace(temporary, path)
+        print(f"Set {len(groups)} Deadmines groups to {args.mode}; revision {policy['revision']}")
+        print("Run .reload config in worldserver. Gateway reloads the same policy automatically.")
+        print("Existing .woj group/npc overlays take precedence; clear them with mode inherit if used.")
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
+
+
+if __name__ == "__main__":
+    main()

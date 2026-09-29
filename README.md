@@ -4,6 +4,8 @@
 
 # World of Jevs
 
+**Have an AzerothCore server? [Add the module and run The Deadmines with your own key →](INSTALL.md)**
+
 **What is Jev?** [Jev](https://openrouter.ai/typesafe/jev-1.13) is a fast decision model: give it a situation and a bounded question, and it returns a typed choice or probability rather than a paragraph of dialogue. Amid all the attention on AI *playing* games—and doing many other tasks—I wanted to turn the idea around: what if AI could **be part of the game**, deciding how its inhabitants react to a player?
 
 **What if the creatures in a familiar MMO dungeon could decide what to do, while the game remained the authority on what they can do?** World of Jevs is an experiment on a local [AzerothCore](https://www.azerothcore.org/) server. A probabilistic model called **Jev** chooses an NPC's next *intent* from a bounded set of actions. AzerothCore still runs the world.
@@ -98,7 +100,7 @@ The public-facing goal is a small **AzerothCore module plus a separate Jev gatew
 
 This is a **design target**, not an installation guide or a promise that the present development tree is already a minimal distributable package.
 
-The [experimental integration package and installation guide](INSTALL.md) contain the public AzerothCore module, Jev gateway and a one-creature example for the pinned AzerothCore revision. The exact public module has been built and booted; live play with this packaged build is still to be checked.
+Already running AzerothCore? The [setup guide](INSTALL.md) covers adding the module, building once, starting the gateway with **your own OpenRouter key**, and enabling The Deadmines. The package includes all 21 configured dungeon groups and 25 creature ability sheets, including summoned creatures; no test-player tooling is required.
 
 The [original-AI recording mode and integration guide](docs/integration.md) describe how AzerothCore can keep its normal AI in control while saving the Jev-format requests that would have been made for those creatures, without calling Jev. This records inputs, not the native AI's hidden decision labels.
 

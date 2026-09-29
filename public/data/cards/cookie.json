@@ -1,0 +1,161 @@
+{
+  "entry": 645,
+  "creatureName": "Cookie",
+  "identity": "Cookie, the Deadmines ship's cook",
+  "characterBrief": {
+    "identity": "Cookie, the Deadmines ship's cook.",
+    "local_goal": "Defend your encounter area.",
+    "allies": [
+      "Nearby Defias defenders."
+    ],
+    "enemies": [
+      "Visible hostile intruders."
+    ],
+    "relationships": [
+      "Ship's cook."
+    ],
+    "temperament": "Hostile when engaged.",
+    "risk": "Holds ground; SmartAI has no flee event.",
+    "knowledge_boundary": "Knows visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No configured speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent abilities, summons, or phases."
+    ]
+  },
+  "original": {
+    "identity": "Cookie, the Deadmines ship's cook",
+    "flee": "Hold your ground; the pinned SmartAI defines no flee event.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 645,
+        "spell": 6306,
+        "initial_ms": [
+          1000,
+          7000
+        ],
+        "repeat_ms": [
+          20000,
+          25000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–7000 ms",
+          "repeat": "20000–25000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6306,
+          "slug": "acid_splash",
+          "name": "Acid Splash",
+          "target": "self",
+          "does": "Use the pinned SmartAI self-cast action.",
+          "tendency": "Open after 1-7 seconds; repeat after 20-25 seconds.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 645,
+        "spell": 5174,
+        "initial_ms": [
+          10000,
+          12000
+        ],
+        "repeat_ms": [
+          15000,
+          25000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "10000–12000 ms",
+          "repeat": "15000–25000 ms"
+        },
+        "sheetAbility": {
+          "spell": 5174,
+          "slug": "cookies_cooking",
+          "name": "Cookie's Cooking",
+          "target": "self",
+          "does": "Use the pinned SmartAI self-cast action.",
+          "tendency": "Open after 10-12 seconds; repeat after 15-25 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "cookie",
+  "title": "Cookie",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/cookie.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

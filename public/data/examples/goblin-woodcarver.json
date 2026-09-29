@@ -1,0 +1,52 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "a Goblin Woodcarver defending Sneed and the Deadmines Mast Room",
+    "self": "hp below 15%; 15 yd from your post; fighting",
+    "legend": "A=can attack; U1=Axe Toss; U2=Cleave",
+    "enemies": "e1 player mid close engaged attacks kin A U1",
+    "kin": "a0 self critical; a1 kin full near free; a2 kin full mid-range free",
+    "scene": "1 attackers; 2 observed kin",
+    "magic": "U1=Axe Toss: physically ready, aura none; U2=Cleave: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 eligible; kin1/engaged foes1; help answer#1 blocked by target; requests0; flee#1 eligible; combat,hp<=15%,not casting,engaged,target<=40yd,once/epoch,targets1; routine#1 active; peaceful; return home#1 eligible; engine overlay; Axe Toss#1 eligible; first2s-10s/repeat15s-20s,combat,engaged,target<=20yd; physical1/eligible1; Cleave#1 waiting under 1s; first2s-10s/repeat7s-12s,combat,engaged; physical1/eligible0",
+    "trigger_events": "events14-21 last 3 of 8: 19 flee#1 blocked; 20 flee#1 eligible; 21 Axe Toss#1 eligible",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "flee": "Flee from a chosen enemy; ask nobody.",
+        "call_help": "Ask chosen kin; stay here.",
+        "flee_for_help": "Ask eligible kin and run to them. Below 15% health, flee toward nearby room defenders once.",
+        "use_axe_toss": "Throw an axe at a hostile within twenty yards."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    },
+    "flee_assist_recipient": {
+      "type": "choice",
+      "instructions": "Choose which reachable kinsman to ask and run toward.",
+      "criteria": {
+        "a1": "Kin a1.",
+        "a2": "Kin a2."
+      }
+    }
+  }
+}

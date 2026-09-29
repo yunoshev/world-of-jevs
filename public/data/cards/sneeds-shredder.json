@@ -1,0 +1,179 @@
+{
+  "entry": 642,
+  "creatureName": "Sneed's Shredder",
+  "identity": "Sneed's Shredder, the mobile goblin machine guarding the Deadmines Mast Room",
+  "characterBrief": {
+    "identity": "Sneed's Shredder in the Mast Room.",
+    "local_goal": "Guard the Mast Room until destroyed.",
+    "allies": [
+      "Sneed and nearby Mast Room defenders."
+    ],
+    "enemies": [
+      "Visible hostiles entering the encounter."
+    ],
+    "relationships": [
+      "Carries the encounter's runtime Sneed transition."
+    ],
+    "temperament": "Relentless and confrontational.",
+    "risk": "Holds ground and does not flee.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "Sneed's Shredder, the mobile goblin machine guarding the Deadmines Mast Room",
+    "flee": "Hold your ground; your original boss behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 642,
+        "spell": 7399,
+        "initial_ms": [
+          7000,
+          7000
+        ],
+        "repeat_ms": [
+          15000,
+          15000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "hostile_random",
+        "target_radius_yards": 5,
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": 5,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "7000–7000 ms",
+          "repeat": "15000–15000 ms"
+        },
+        "sheetAbility": {
+          "spell": 7399,
+          "slug": "terrify",
+          "name": "Terrify",
+          "target": "enemy",
+          "does": "Terrify a hostile enemy within five yards.",
+          "tendency": "First at 7 seconds; then every 15 seconds.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 642,
+        "spell": 3603,
+        "initial_ms": [
+          4000,
+          4000
+        ],
+        "repeat_ms": [
+          15000,
+          15000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "victim",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "4000–4000 ms",
+          "repeat": "15000–15000 ms"
+        },
+        "sheetAbility": {
+          "spell": 3603,
+          "slug": "distracting_pain",
+          "name": "Distracting Pain",
+          "target": "enemy",
+          "does": "Afflict your current victim with distracting pain.",
+          "tendency": "First at 4 seconds; then every 15 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [
+      {
+        "entry": 643,
+        "created_by_spell": 5141,
+        "control": "inherit",
+        "aggro_talk": false
+      }
+    ],
+    "createdBy": null,
+    "deathEffects": [
+      {
+        "id": "sneed_shredder_eject",
+        "type": "cast_spell",
+        "entry": 642,
+        "spell": 5141,
+        "expected_summon_count": 1
+      }
+    ],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "sneeds-shredder",
+  "title": "Sneed's Shredder",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/sneeds-shredder.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

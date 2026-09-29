@@ -1,0 +1,38 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 70-95%; 14 yd from your post; fighting",
+    "enemy_summary": "hp 1 full; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 1 high,2 full; call 0, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=blocked(target),kin=0,engaged=1;help_answer#1=blocked(target),requests=0;flee#1=blocked(policy),policy=disabled;routine#1=blocked(combat);return#1=eligible;spell_5208#1=waiting(5-15s),physical=1/eligible=0;spell_40505#1=eligible,physical=1/eligible=1",
+    "trigger_events": "events14-21,last3/8:19:spell_40505#1=blocked;20:aggro#1=succeeded;21:spell_40505#1=eligible",
+    "character": "id=Captain Greenskin, ship captain;goal=Lead your patrol;ally=Linked pirate/Squallshaper/Ship defenders;enemy=intruders;ties=Leads a three-member formation;mood=Aggressive/direct;risk=Holds ground; never flees;known=Knows only state, kin, triggers/abilities;voice=unspecified;speech=none authored;rules=Use eligible actions/targets/Do not invent facts or abilities/Keep the native patrol route",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting.",
+        "use_cleave": "Due: Strike your current highest-threat victim in melee."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+[project]
+name = "woj-gateway"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi>=0.115", "pydantic>=2.9", "uvicorn>=0.32", "httpx>=0.27"]
+
+[project.optional-dependencies]
+dev = ["pyright==1.1.414"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+woj_gateway = ["sheets/*.json"]
+
+[tool.pyright]
+# Пути в этой секции — относительно каталога с этим файлом (gateway/), а не
+# относительно того места, откуда запущен pyright: так конфиг остаётся
+# рабочим и в основном репозитории, где `gateway/.venv` существует, и когда
+# сам pyright физически запущен из другого рабочего дерева (см.
+# docs/tooling.md) — в последнем случае .venv подставляется флагом
+# --pythonpath, а не через эту секцию.
+include = ["woj_gateway"]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.12"
+typeCheckingMode = "standard"

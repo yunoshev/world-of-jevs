@@ -1,0 +1,92 @@
+{
+  "entry": 3450,
+  "creatureName": "Defias Companion",
+  "identity": "a summoned Defias Companion defending the Deadmines ship crew",
+  "characterBrief": {
+    "identity": "Defias Companion summoned aboard the ship.",
+    "local_goal": "Protect the pirate who summoned you.",
+    "allies": [
+      "Summoning pirate and ship crew."
+    ],
+    "enemies": [
+      "Visible enemies of the crew."
+    ],
+    "relationships": [
+      "Exists only through one exact pirate summon."
+    ],
+    "temperament": "Loyal and aggressive.",
+    "risk": "Fights until defeated.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, and listed triggers.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent abilities.",
+      "Stay loyal to the ship crew."
+    ]
+  },
+  "original": {
+    "identity": "a summoned Defias Companion defending the Deadmines ship crew",
+    "flee": "Fight beside the crew until defeated; do not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": {
+      "entry": 3450,
+      "created_by_spell": 5172,
+      "control": "inherit",
+      "aggro_talk": false,
+      "ambient_talk": false,
+      "flee_enabled": false
+    },
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "defias-companion",
+  "title": "Defias Companion",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-companion.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

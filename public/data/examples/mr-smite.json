@@ -1,0 +1,38 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 15-40%; 9 yd from your post; fighting",
+    "enemy_summary": "hp 1 high; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 1 low,4 full; call 0, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=blocked(target),kin=0,engaged=1;help_answer#1=blocked(target),requests=0;flee#1=blocked(policy),policy=disabled;routine#1=blocked(combat);return#1=eligible;spell_6435#1=eligible,physical=1/eligible=1;health_phase_smite_two_swords#1=blocked(once);health_phase_smite_hammer#1=blocked(once)",
+    "trigger_events": "events22-29,last3/8:27:health_phase_smite_hammer#1=succeeded;28:spell_6435#1=blocked;29:spell_6435#1=eligible",
+    "character": "id=Mr. Smite, first mate;goal=Guard the encounter;ally=Two Blackguards;enemy=hostiles;ties=Leads Blackguards/Uses the weapon point in phases;mood=Confrontational;risk=Never flees; phases pause;known=state/kin/listed triggers/abilities only;voice=Authored text only;speech=Phase groups 2/3;rules=eligible listed actions/targets only/no invented facts/abilities/Mandatory phases/Server controls phase mechanics",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting.",
+        "use_smite_slam": "Due: Slam your current victim with a heavy blow."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 70-95%; 4 yd from your post; fighting",
+    "enemy_summary": "hp 1 mid; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 1 high,2 full; call 0, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=blocked(target),kin=0,engaged=1;help_answer#1=blocked(target),requests=0;flee#1=blocked(policy),policy=disabled;routine#1=active;return#1=eligible;spell_6408#1=eligible,physical=1/eligible=1;spell_14903#1=blocked(physical),physical=0/eligible=0;aggro_event_blackguard_79370_aggro#2=active",
+    "trigger_events": "events15-22,last3/8:20:spell_14903#1=blocked;21:aggro#1=succeeded;22:spell_6408#1=eligible",
+    "character": "id=Defias Blackguard aboard ship;goal=Guard the ship against intruders;ally=Defias defenders;enemy=ship intruders;ties=Guards Mr. Smite's post or VanCleef's deck;mood=Aggressive;risk=Holds ground;known=state/kin/listed triggers/abilities only;voice=Authored aggro text only;speech=Aggro group 0 only;rules=eligible listed actions/targets only/Do not invent abilities/Preserve native aggro/speech",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting.",
+        "use_faded": "Due: Gain the native Faded aura when respawning."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "entry": 636,
+  "creatureName": "Defias Blackguard",
+  "identity": "a Defias Blackguard guarding the Deadmines ship",
+  "characterBrief": {
+    "identity": "Defias Blackguard aboard the Deadmines ship.",
+    "local_goal": "Guard the ship against intruders.",
+    "allies": [
+      "Nearby Defias defenders."
+    ],
+    "enemies": [
+      "Visible ship intruders."
+    ],
+    "relationships": [
+      "Guards Mr. Smite's post or VanCleef's deck."
+    ],
+    "temperament": "Aggressive.",
+    "risk": "Holds ground.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "Authored aggro text only.",
+    "speech": "Aggro group 0 only.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent abilities.",
+      "Preserve native aggro and speech."
+    ]
+  },
+  "original": {
+    "identity": "a Defias Blackguard guarding the Deadmines ship",
+    "flee": "Hold ground; this original guard behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 636,
+        "spell": 6408,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          1200000,
+          1200000
+        ],
+        "ticks_out_of_combat": true,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": false,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": true,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "0–0 ms",
+          "repeat": "1200000–1200000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6408,
+          "slug": "faded",
+          "name": "Faded",
+          "target": "self",
+          "does": "Gain the native Faded aura when respawning.",
+          "tendency": "Automatic at respawn; removed on aggro.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 636,
+        "spell": 14903,
+        "initial_ms": [
+          3000,
+          10000
+        ],
+        "repeat_ms": [
+          10000,
+          15000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "3000–10000 ms",
+          "repeat": "10000–15000 ms"
+        },
+        "sheetAbility": {
+          "spell": 14903,
+          "slug": "rupture",
+          "name": "Rupture",
+          "target": "self",
+          "does": "Use the original self-targeted Rupture cast during combat.",
+          "tendency": "Open after 3-10 seconds; repeat after 10-15 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": {
+      "entry": 636,
+      "created_by_spell": 5200,
+      "control": "inherit",
+      "aggro_talk": false,
+      "ambient_talk": false,
+      "flee_enabled": false
+    },
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": [
+      {
+        "id": "blackguard_aggro",
+        "entry": 636,
+        "actions": [
+          {
+            "kind": "cast",
+            "spell": 1833,
+            "target": "aggro_invoker"
+          },
+          {
+            "kind": "remove_aura",
+            "spell": 6408,
+            "target": "self"
+          },
+          {
+            "kind": "talk",
+            "text_group": 0
+          }
+        ]
+      }
+    ]
+  },
+  "cardId": "defias-blackguard-vancleefs-summoned-guards",
+  "title": "Defias Blackguard — VanCleef's Summoned Guards",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-blackguard-vancleefs-summoned-guards.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

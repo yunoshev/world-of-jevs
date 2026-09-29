@@ -1,0 +1,134 @@
+{
+  "entry": 657,
+  "creatureName": "Defias Pirate",
+  "identity": "a Defias Pirate defending the ship inside the Deadmines",
+  "characterBrief": {
+    "identity": "Defias Pirate aboard the Deadmines ship.",
+    "local_goal": "Guard the ship and its officers.",
+    "allies": [
+      "Ship crew and summoned companion."
+    ],
+    "enemies": [
+      "Visible ship intruders."
+    ],
+    "relationships": [
+      "Summons one loyal companion while at post."
+    ],
+    "temperament": "Watchful and aggressive.",
+    "risk": "Holds the ship.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities.",
+      "Summon only the configured companion."
+    ]
+  },
+  "original": {
+    "identity": "a Defias Pirate defending the ship inside the Deadmines",
+    "flee": "Hold the ship; this original pirate behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 657,
+        "spell": 5172,
+        "initial_ms": [
+          1000,
+          1000
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "ticks_out_of_combat": true,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": false,
+        "require_caster_out_of_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": true,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–1000 ms",
+          "repeat": "0–0 ms"
+        },
+        "sheetAbility": {
+          "spell": 5172,
+          "slug": "bloodsail_companion",
+          "name": "Bloodsail Companion",
+          "target": "self",
+          "does": "Summon your one configured Defias Companion.",
+          "tendency": "Do this once shortly after taking your post.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [
+      {
+        "entry": 3450,
+        "created_by_spell": 5172,
+        "control": "inherit",
+        "aggro_talk": false,
+        "ambient_talk": false,
+        "flee_enabled": false
+      }
+    ],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "defias-pirate",
+  "title": "Defias Pirate",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-pirate.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

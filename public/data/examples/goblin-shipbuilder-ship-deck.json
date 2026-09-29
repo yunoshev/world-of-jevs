@@ -1,0 +1,52 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 100%; 3 yd from your post; fighting",
+    "legend": "A=can attack",
+    "enemies": "e1 player full close engaged attacks kin A",
+    "kin": "a0 self full; a1 kin full near free",
+    "scene": "1 attackers; 1 observed kin",
+    "magic": "no spell facts",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by health; combat,hp<=15%,not casting,engaged,target<=40yd,once/epoch,targets1; routine#1 active; peaceful; return home#1 eligible; engine overlay",
+    "trigger_events": "events5-12 last 3 of 8: 10 help call#1 blocked; 11 return home#1 eligible; 12 flee#1 blocked",
+    "character": {
+      "id": "Goblin Shipbuilder working on ship",
+      "goal": "Defend your work area/crew",
+      "ally": "ship crew/Defias defenders",
+      "enemy": "ship intruders",
+      "ties": "Works beside a Defias Pirate near Mr. Smite",
+      "mood": "Defensive",
+      "risk": "Seeks help when nearly dead",
+      "known": "Knows only state, kin/listed triggers",
+      "voice": "unspecified",
+      "speech": "none authored",
+      "rules": "eligible listed actions/targets only/Do not invent abilities/Preserve native wander/respawn"
+    },
+    "last": "idle, nothing since - a while ago"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose only listed eligible actions and targets.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

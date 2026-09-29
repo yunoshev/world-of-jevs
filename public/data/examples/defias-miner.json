@@ -1,0 +1,42 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "a Defias Miner defending the Deadmines entrance",
+    "self": "hp 70-95%; at your post; fighting",
+    "legend": "A=can attack; U1=Pierce Armor",
+    "enemies": "e1 player high close engaged attacks kin A U1",
+    "kin": "a0 self high; a1 kin full close fighting; a2 kin full near free; a3 kin full mid-range free; a4 kin full mid-range free; a5 kin full mid-range free",
+    "scene": "1 attackers; 5 observed kin",
+    "magic": "U1=Pierce Armor: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 eligible; kin1/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by health; combat,hp<=15%,not casting,engaged,target<=40yd,once/epoch,targets1; routine#1 active; peaceful; return home#1 eligible; engine overlay; Pierce Armor#1 eligible; first2s-10s/repeat15s-20s,combat,engaged; physical1/eligible1",
+    "trigger_events": "events14-21 last 3 of 8: 19 help answer#1 succeeded; 20 help answer#1 blocked; 21 Pierce Armor#1 eligible",
+    "last": "answer_help, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "call_help": "Ask chosen kin; stay here.",
+        "use_pierce_armor": "Strike the current enemy and weaken its armor."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

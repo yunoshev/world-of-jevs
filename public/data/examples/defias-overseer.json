@@ -1,0 +1,42 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "a Defias Overseer commanding the Deadmines entrance workers",
+    "self": "hp 100%; 16 yd from your post; fighting",
+    "legend": "A=can attack; U1=Battle Command",
+    "enemies": "e1 player mid close engaged attacks kin A",
+    "kin": "a0 self full U1; a1 kin high close fighting; a2 kin full near free; a3 kin full mid-range free; a4 kin full mid-range free; a5 kin full mid-range free",
+    "scene": "1 attackers; 5 observed kin",
+    "magic": "U1=Battle Command: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 eligible; kin1/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by health; combat,hp<=15%,not casting,engaged,target<=40yd,once/epoch,targets1; routine#1 active; peaceful; return home#1 eligible; engine overlay; Battle Command#1 eligible; first2s-10s/repeat15s-25s,combat; physical1/eligible1",
+    "trigger_events": "events16-23 last 3 of 8: 21 help call#1 succeeded; 22 help call#1 succeeded; 23 Battle Command#1 eligible",
+    "last": "call_help, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "call_help": "Ask chosen kin; stay here.",
+        "use_battle_command": "Use Battle Command on yourself in combat."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

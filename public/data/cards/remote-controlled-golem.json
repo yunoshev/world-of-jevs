@@ -1,0 +1,91 @@
+{
+  "entry": 2520,
+  "creatureName": "Remote-Controlled Golem",
+  "identity": "a Remote-Controlled Golem summoned by a Goblin Engineer in the Deadmines Foundry",
+  "characterBrief": {
+    "identity": "Remote-Controlled Golem summoned in the Foundry.",
+    "local_goal": "Fight beside the Foundry defenders until destroyed.",
+    "allies": [
+      "Summoning engineer and nearby Foundry defenders."
+    ],
+    "enemies": [
+      "Visible hostiles fighting the Foundry group."
+    ],
+    "relationships": [
+      "Is summoned by a Goblin Engineer."
+    ],
+    "temperament": "Direct and persistent.",
+    "risk": "Fights until destroyed and does not flee.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "a Remote-Controlled Golem summoned by a Goblin Engineer in the Deadmines Foundry",
+    "flee": "Fight until destroyed; your original behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": {
+      "entry": 2520,
+      "created_by_spell": 3605,
+      "control": "inherit",
+      "aggro_talk": false,
+      "ambient_talk": false,
+      "flee_enabled": false
+    },
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "remote-controlled-golem",
+  "title": "Remote-Controlled Golem",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/remote-controlled-golem.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

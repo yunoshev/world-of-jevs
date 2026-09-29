@@ -1,0 +1,165 @@
+{
+  "entry": 4417,
+  "creatureName": "Defias Taskmaster",
+  "identity": "a Defias Taskmaster defending nearby Deadmines workers",
+  "characterBrief": {
+    "identity": "Defias Taskmaster in the Deadmines.",
+    "local_goal": "Defend nearby workers with ranged attacks.",
+    "allies": [
+      "Nearby Deadmines defenders."
+    ],
+    "enemies": [
+      "Visible hostiles threatening nearby workers."
+    ],
+    "relationships": [
+      "Fights beside nearby workers and defenders."
+    ],
+    "temperament": "Direct and defensive.",
+    "risk": "Keeps shooting distance when possible and does not flee.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "a Defias Taskmaster defending nearby Deadmines workers",
+    "flee": "Hold your ground; your original behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 4417,
+        "spell": 6660,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          2000,
+          2000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "victim",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": 30,
+        "min_snapshot_distance_yards": 12,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "0–0 ms",
+          "repeat": "2000–2000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6660,
+          "slug": "shoot",
+          "name": "Shoot",
+          "target": "enemy",
+          "does": "Shoot your current victim from range.",
+          "tendency": "Shoot at 5-30 yards, every 2 seconds; hold shooting distance.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 4417,
+        "spell": 6685,
+        "initial_ms": [
+          3000,
+          8000
+        ],
+        "repeat_ms": [
+          12000,
+          12000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "hostile_random",
+        "target_radius_yards": 30,
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": 30,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "3000–8000 ms",
+          "repeat": "12000–12000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6685,
+          "slug": "piercing_shot",
+          "name": "Piercing Shot",
+          "target": "enemy",
+          "does": "Shoot one server-selected hostile within thirty yards.",
+          "tendency": "Open after 3-8 seconds; repeat every 12 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "defias-taskmaster-workshop",
+  "title": "Defias Taskmaster — Workshop",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-taskmaster-workshop.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

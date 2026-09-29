@@ -1,0 +1,171 @@
+{
+  "entry": 622,
+  "creatureName": "Goblin Engineer",
+  "identity": "a Goblin Engineer defending Gilnid in the Deadmines Foundry",
+  "characterBrief": {
+    "identity": "Goblin Engineer in the Foundry.",
+    "local_goal": "Defend Gilnid with ranged fire and configured machinery.",
+    "allies": [
+      "Gilnid, Foundry defenders, and summoned golems."
+    ],
+    "enemies": [
+      "Visible hostiles entering the Foundry."
+    ],
+    "relationships": [
+      "Can summon a Remote-Controlled Golem beside the group."
+    ],
+    "temperament": "Defensive and machinery-focused.",
+    "risk": "Flees toward Foundry defenders below fifteen percent health.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "a Goblin Engineer defending Gilnid in the Deadmines Foundry",
+    "flee": "Below 15% health, flee toward nearby foundry defenders once.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 622,
+        "spell": 6660,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          2000,
+          2000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "victim",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": 30,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "0–0 ms",
+          "repeat": "2000–2000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6660,
+          "slug": "shoot",
+          "name": "Shoot",
+          "target": "enemy",
+          "does": "Shoot your current victim from range.",
+          "tendency": "Use at 5-30 yards; repeat every 2 seconds.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 622,
+        "spell": 3605,
+        "initial_ms": [
+          1000,
+          9000
+        ],
+        "repeat_ms": [
+          35000,
+          35000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–9000 ms",
+          "repeat": "35000–35000 ms"
+        },
+        "sheetAbility": {
+          "spell": 3605,
+          "slug": "summon_remote_controlled_golem",
+          "name": "Summon Remote-Controlled Golem",
+          "target": "self",
+          "does": "Deploy a Remote-Controlled Golem to fight beside you.",
+          "tendency": "First after 1-9 seconds in combat; repeat after 35 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": true,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [
+      {
+        "entry": 2520,
+        "created_by_spell": 3605,
+        "control": "inherit",
+        "aggro_talk": false,
+        "ambient_talk": false,
+        "flee_enabled": false
+      }
+    ],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "goblin-engineer",
+  "title": "Goblin Engineer",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/goblin-engineer.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

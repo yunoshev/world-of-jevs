@@ -1,0 +1,199 @@
+{
+  "entry": 1729,
+  "creatureName": "Defias Evoker",
+  "identity": "a Defias Evoker protecting the nearby Deadmines work area with fire magic",
+  "characterBrief": {
+    "identity": "Defias Evoker in the Deadmines.",
+    "local_goal": "Protect the nearby work area with configured magic.",
+    "allies": [
+      "Nearby Deadmines defenders."
+    ],
+    "enemies": [
+      "Visible hostiles threatening the work area."
+    ],
+    "relationships": [
+      "Supports nearby Defias defenders."
+    ],
+    "temperament": "Defensive and magic-focused.",
+    "risk": "Seeks nearby Defias help when nearly dead.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "a Defias Evoker protecting the nearby Deadmines work area with fire magic",
+    "flee": "When nearly dead, run to find nearby Defias help.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 1729,
+        "spell": 12544,
+        "initial_ms": [
+          1000,
+          1000
+        ],
+        "repeat_ms": [
+          1200000,
+          1200000
+        ],
+        "ticks_out_of_combat": true,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": false,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–1000 ms",
+          "repeat": "1200000–1200000 ms"
+        },
+        "sheetAbility": {
+          "spell": 12544,
+          "slug": "frost_armor",
+          "name": "Frost Armor",
+          "target": "self",
+          "does": "Protect yourself with Frost Armor while outside combat.",
+          "tendency": "Apply shortly after spawning; normally refresh after 20 minutes.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 1729,
+        "spell": 11829,
+        "initial_ms": [
+          0,
+          1200
+        ],
+        "repeat_ms": [
+          3100,
+          17100
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "0–1200 ms",
+          "repeat": "3100–17100 ms"
+        },
+        "sheetAbility": {
+          "spell": 11829,
+          "slug": "flamestrike",
+          "name": "Flamestrike",
+          "target": "enemy",
+          "does": "Strike a hostile from your threat list with fire.",
+          "tendency": "Use in combat; normally repeat after 3.1-17.1 seconds.",
+          "ally_below_pct": null
+        }
+      },
+      {
+        "entry": 1729,
+        "spell": 4979,
+        "initial_ms": [
+          1100,
+          21100
+        ],
+        "repeat_ms": [
+          42600,
+          63500
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "1100–21100 ms",
+          "repeat": "42600–63500 ms"
+        },
+        "sheetAbility": {
+          "spell": 4979,
+          "slug": "quick_flame_ward",
+          "name": "Quick Flame Ward",
+          "target": "self",
+          "does": "Use Quick Flame Ward on yourself in combat.",
+          "tendency": "Use after opening; normally repeat after 42.6-63.5 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": true,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "defias-evoker-entrance",
+  "title": "Defias Evoker — Entrance",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-evoker-entrance.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

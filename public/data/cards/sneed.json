@@ -1,0 +1,138 @@
+{
+  "entry": 643,
+  "creatureName": "Sneed",
+  "identity": "Sneed, ejected from the Shredder and guarding the Deadmines Mast Room",
+  "characterBrief": {
+    "identity": "Sneed after leaving the Shredder.",
+    "local_goal": "Continue guarding the Mast Room encounter.",
+    "allies": [
+      "Nearby Mast Room defenders."
+    ],
+    "enemies": [
+      "Visible hostiles in the encounter."
+    ],
+    "relationships": [
+      "Appears from Sneed's Shredder when it is destroyed."
+    ],
+    "temperament": "Relentless and confrontational.",
+    "risk": "Holds ground and does not flee.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "Sneed, ejected from the Shredder and guarding the Deadmines Mast Room",
+    "flee": "Hold your ground; your original boss behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 643,
+        "spell": 6713,
+        "initial_ms": [
+          1000,
+          7000
+        ],
+        "repeat_ms": [
+          20000,
+          25000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "victim",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–7000 ms",
+          "repeat": "20000–25000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6713,
+          "slug": "disarm",
+          "name": "Disarm",
+          "target": "enemy",
+          "does": "Disarm your current victim during close combat.",
+          "tendency": "First after 1-7 seconds; repeat after 20-25 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": {
+      "entry": 643,
+      "created_by_spell": 5141,
+      "control": "inherit",
+      "aggro_talk": false
+    },
+    "deathEffects": [
+      {
+        "id": "sneed_mast_room",
+        "type": "activate_gameobject",
+        "entry": 643,
+        "gameobject_entry": 16400,
+        "initial_object_state": 1,
+        "final_object_state": 0
+      }
+    ],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "sneed",
+  "title": "Sneed",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/sneed.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

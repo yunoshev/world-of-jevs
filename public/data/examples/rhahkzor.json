@@ -1,0 +1,42 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "Rhahk'Zor, the ogre foreman guarding the Deadmines Factory Door",
+    "self": "hp 100%; at your post; fighting",
+    "legend": "A=can attack; U1=Rhahk'Zor Slam",
+    "enemies": "e1 player high close engaged attacks kin A U1",
+    "kin": "a0 self full",
+    "scene": "1 attackers; 0 observed kin",
+    "magic": "U1=Rhahk'Zor Slam: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 blocked by combat; peaceful; return home#1 eligible; engine overlay; stock aggro talk#1 eligible; 100% on aggro,once/combat; Rhahk'Zor Slam#1 eligible; first0.8s-8.5s/repeat11s-17.2s,combat,engaged; physical1/eligible1",
+    "trigger_events": "events9-16 last 3 of 8: 14 routine#1 blocked; 15 return home#1 eligible; 16 Rhahk'Zor Slam#1 eligible",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "stock_talk": "Use stock aggro call.",
+        "use_rhahk_zor_slam": "Slam your current enemy with a heavy melee blow."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

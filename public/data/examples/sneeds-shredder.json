@@ -1,0 +1,41 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "Sneed's Shredder, the mobile goblin machine guarding the Deadmines Mast Room",
+    "self": "hp 70-95%; 6 yd from your post; fighting",
+    "legend": "A=can attack; U1=Distracting Pain; U2=Terrify",
+    "enemies": "e1 player high close engaged attacks kin A U1",
+    "kin": "a0 self high",
+    "scene": "1 attackers; 0 observed kin",
+    "magic": "U1=Distracting Pain: physically ready, aura none; U2=Terrify: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 active; peaceful; return home#1 eligible; engine overlay; Distracting Pain#1 eligible; first4s/repeat15s,combat,engaged; physical1/eligible1; Terrify#1 waiting 1-5s; first7s/repeat15s,combat,engaged,target<=5yd; physical1/eligible0",
+    "trigger_events": "events10-17 last 3 of 8: 15 return home#1 eligible; 16 aggro#1 succeeded; 17 Distracting Pain#1 eligible",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "use_distracting_pain": "Afflict your current victim with distracting pain."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

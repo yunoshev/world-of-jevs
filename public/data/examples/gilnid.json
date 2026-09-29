@@ -1,0 +1,50 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "Gilnid, the goblin boss guarding the Deadmines Foundry",
+    "self": "hp 100%; at your post; fighting",
+    "legend": "A=can attack; U1=Molten Metal",
+    "enemies": "e1 player full close engaged attacks kin A U1",
+    "kin": "a0 self full; a1 kin full close free; a2 kin full close free; a3 kin full mid-range free; a4 kin full mid-range free",
+    "scene": "1 attackers; 4 observed kin",
+    "magic": "U1=Molten Metal: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 eligible; kin2/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 blocked by combat; peaceful; return home#1 eligible; engine overlay; stock ambient talk#1 blocked by combat; 100% out of combat,first120s/repeat120s; Molten Metal#1 eligible; first1s-6s/repeat15s-25s,combat,engaged; physical1/eligible1",
+    "trigger_events": "events5-12 last 3 of 8: 10 stock ambient talk#1 blocked; 11 aggro#1 succeeded; 12 Molten Metal#1 eligible",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "call_help": "Ask chosen kin; stay here.",
+        "use_molten_metal": "Burn your current victim with molten metal."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    },
+    "call_help_recipient": {
+      "type": "choice",
+      "instructions": "Choose which eligible kinsman to ask for help.",
+      "criteria": {
+        "a1": "Kin a1.",
+        "a2": "Kin a2."
+      }
+    }
+  }
+}

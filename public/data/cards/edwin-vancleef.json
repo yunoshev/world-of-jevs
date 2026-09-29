@@ -1,0 +1,195 @@
+{
+  "entry": 639,
+  "creatureName": "Edwin VanCleef",
+  "identity": "Edwin VanCleef, the Defias Kingpin defending the Brotherhood aboard the Deadmines ship",
+  "characterBrief": {
+    "identity": "Edwin VanCleef, Defias Kingpin.",
+    "local_goal": "Defend the Brotherhood.",
+    "allies": [
+      "Defias defenders summoned from shadows."
+    ],
+    "enemies": [
+      "Visible challengers."
+    ],
+    "relationships": [
+      "Leads the Brotherhood."
+    ],
+    "temperament": "Defiant.",
+    "risk": "Holds ground; calls allies when wounded.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "Authored Brotherhood lines only.",
+    "speech": "Aggro, health, kill, death groups 0-5.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities.",
+      "Preserve health speech."
+    ]
+  },
+  "original": {
+    "identity": "Edwin VanCleef, the Defias Kingpin defending the Brotherhood aboard the Deadmines ship",
+    "flee": "Hold ground; original VanCleef has no flee action.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 639,
+        "spell": 674,
+        "initial_ms": [
+          1000,
+          1000
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "ticks_out_of_combat": true,
+        "chance_pct": 100,
+        "target": "self",
+        "allow_self": true,
+        "require_caster_combat": false,
+        "require_caster_out_of_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": false,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": true,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–1000 ms",
+          "repeat": "0–0 ms"
+        },
+        "sheetAbility": {
+          "spell": 674,
+          "slug": "dual_wield",
+          "name": "Dual Wield",
+          "target": "self",
+          "does": "Equip your native dual-wield fighting aura.",
+          "tendency": "Cast once out of combat, one second after spawn.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [
+      {
+        "entry": 636,
+        "created_by_spell": 5200,
+        "control": "inherit",
+        "aggro_talk": false,
+        "ambient_talk": false,
+        "flee_enabled": false
+      },
+      {
+        "entry": 636,
+        "created_by_spell": 5200,
+        "control": "inherit",
+        "aggro_talk": false,
+        "ambient_talk": false,
+        "flee_enabled": false
+      }
+    ],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [
+      {
+        "id": "vancleef_mid_talk",
+        "entry": 639,
+        "health_pct_min": 34,
+        "health_pct_max": 66,
+        "actions": [
+          {
+            "kind": "talk",
+            "text_group": 1
+          }
+        ]
+      },
+      {
+        "id": "vancleef_allies",
+        "entry": 639,
+        "health_pct_min": 0,
+        "health_pct_max": 50,
+        "actions": [
+          {
+            "kind": "cast",
+            "spell": 5200,
+            "target": "self"
+          },
+          {
+            "kind": "talk",
+            "text_group": 2
+          }
+        ]
+      },
+      {
+        "id": "vancleef_low_talk",
+        "entry": 639,
+        "health_pct_min": 0,
+        "health_pct_max": 33,
+        "actions": [
+          {
+            "kind": "talk",
+            "text_group": 3
+          }
+        ]
+      }
+    ],
+    "aggroEvents": [
+      {
+        "id": "vancleef_aggro",
+        "entry": 639,
+        "actions": [
+          {
+            "kind": "talk",
+            "text_group": 0
+          }
+        ]
+      }
+    ]
+  },
+  "cardId": "edwin-vancleef",
+  "title": "Edwin VanCleef",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/edwin-vancleef.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

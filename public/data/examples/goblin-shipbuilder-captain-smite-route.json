@@ -1,0 +1,51 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 100%; at your post; free to act",
+    "legend": "A=can attack",
+    "enemies": "none",
+    "kin": "a0 self full; a1 kin full close free; a2 kin full near free; a3 kin full near free; a4 kin full mid-range free; a5 kin full mid-range free; a6 kin full mid-range free; a7 kin full mid-range free",
+    "scene": "0 attackers; 7 observed kin",
+    "magic": "no spell facts",
+    "triggers": "aggro#1 blocked by target; attack0; help call#1 blocked by combat; kin3/engaged foes0; help answer#1 blocked by target; requests0; flee#1 blocked by combat; combat,hp<=15%,not casting,engaged,target<=40yd,once/epoch,targets0; routine#1 eligible; peaceful; return home#1 blocked by home; engine overlay",
+    "trigger_events": "events1-7 last 3 of 7: 5 routine#1 eligible; 6 return home#1 blocked; 7 flee#1 blocked",
+    "character": {
+      "id": "Goblin Shipbuilder working on ship",
+      "goal": "Defend your work area/crew",
+      "ally": "ship crew/Defias defenders",
+      "enemy": "ship intruders",
+      "ties": "Works beside a Defias Pirate near Mr. Smite",
+      "mood": "Defensive",
+      "risk": "Seeks help when nearly dead",
+      "known": "Knows only state, kin/listed triggers",
+      "voice": "unspecified",
+      "speech": "none authored",
+      "rules": "eligible listed actions/targets only/Do not invent abilities/Preserve native wander/respawn"
+    },
+    "routine": "usual routine: roam within 3 yd of your post; ready to resume"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose only listed eligible actions and targets.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "follow_routine": "Follow your usual stand, roam, or patrol routine."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

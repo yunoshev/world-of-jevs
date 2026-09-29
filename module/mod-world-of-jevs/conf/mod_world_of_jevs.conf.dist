@@ -1,0 +1,13 @@
+[worldserver]
+# Set this to the gateway address reachable from the worldserver process.
+WorldOfJevs.Enable = 1
+WorldOfJevs.RecordOriginal = 0
+WorldOfJevs.GatewayUrl = "http://127.0.0.1:8088"
+WorldOfJevs.TimeoutMs = 3000
+WorldOfJevs.TickMs = 2000
+WorldOfJevs.CombatTickMs = 2000
+WorldOfJevs.CombatFreshnessMs = 4500
+WorldOfJevs.IdleFreshnessMs = 5000
+# Replace with a path visible to the worldserver process.
+WorldOfJevs.BehaviorFile = "/absolute/path/to/woj_behavior.json"
+WorldOfJevs.KeepAlive = ""

@@ -1,0 +1,123 @@
+{
+  "entry": 4416,
+  "creatureName": "Defias Strip Miner",
+  "identity": "a Defias Strip Miner defending the nearby Deadmines work area",
+  "characterBrief": {
+    "identity": "Defias Strip Miner in the Deadmines.",
+    "local_goal": "Rally nearby Defias, then defend this mine.",
+    "allies": [
+      "Nearby Defias."
+    ],
+    "enemies": [
+      "Hostiles in the mine."
+    ],
+    "relationships": [
+      "Fights beside Defias."
+    ],
+    "temperament": "Defensive and group-oriented.",
+    "risk": "On attack, first call nearby Defias; then fight. Flee only near death.",
+    "knowledge_boundary": "Knows visible state, kin, triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "a Defias Strip Miner defending the nearby Deadmines work area",
+    "flee": "When nearly dead, run to find nearby Defias help.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 4416,
+        "spell": 6016,
+        "initial_ms": [
+          2000,
+          10000
+        ],
+        "repeat_ms": [
+          15000,
+          20000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "2000–10000 ms",
+          "repeat": "15000–20000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6016,
+          "slug": "pierce_armor",
+          "name": "Pierce Armor",
+          "target": "enemy",
+          "does": "Strike the current enemy and weaken its armor.",
+          "tendency": "Use in combat; normally repeat after 15-20 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": true,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "defias-strip-miner-entrance",
+  "title": "Defias Strip Miner — Entrance",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-strip-miner-entrance.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

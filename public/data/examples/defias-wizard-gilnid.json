@@ -1,0 +1,39 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 100%; 28 yd from your post; fighting",
+    "enemy_summary": "hp 1 full; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 9 full; call 1, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=eligible,kin=1,engaged=1;help_answer#1=blocked(target),requests=0;flee#1=blocked(policy),policy=disabled;routine#1=active;return#1=eligible;spell_113#1=waiting(1-5s),physical=1/eligible=0;spell_4979#1=waiting(1-5s),physical=1/eligible=0;spell_9053#1=eligible,physical=1/eligible=1",
+    "trigger_events": "events13-20,last3/8:18:help_call#1=eligible;19:return#1=eligible;20:spell_9053#1=eligible",
+    "character": "id=Defias Wizard in the Deadmines;goal=Defend the work area with configured magic;ally=Deadmines defenders;enemy=hostiles threatening work area;ties=Fights beside defenders;mood=Magic-focused/defensive;risk=Holds position instead of fleeing;known=state/kin/listed triggers/abilities only;voice=unspecified;speech=none authored;rules=eligible listed actions/targets only/no invented facts/abilities",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting.",
+        "call_help": "Ask kin; stay here.",
+        "use_fireball": "Due: Strike your current victim with fire magic."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "a Defias Evoker protecting the Deadmines entrance with fire magic",
+    "self": "hp 100%; 4 yd from your post; fighting",
+    "legend": "A=can attack; U1=Frost Armor; U2=Flamestrike; U3=Quick Flame Ward",
+    "enemies": "e1 player high close engaged attacks kin A U2",
+    "kin": "a0 self full; a1 kin low close fighting; a2 kin full close fighting; a3 kin low close fighting; a4 kin full close fighting; a5 kin full near free; a6 kin full near free; a7 kin full mid-range free; a8 kin full mid-range free",
+    "scene": "1 attackers; 8 observed kin",
+    "magic": "U1=Frost Armor: physically unavailable, cooldown 15s+, aura a0; U2=Flamestrike: physically ready, aura none; U3=Quick Flame Ward: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 eligible; kin1/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by health; combat,hp<=15%,not casting,engaged,target<=40yd,once/epoch,targets1; routine#1 active; peaceful; return home#1 eligible; engine overlay; Quick Flame Ward#1 waiting 1-5s; first1.1s-21.1s/repeat42.6s-63.5s,combat; physical1/eligible0; Flamestrike#1 eligible; first0s-1.2s/repeat3.1s-17.1s,combat; physical1/eligible1; Frost Armor#2 waiting 15s+; first1s/repeat1200s; physical0/eligible0",
+    "trigger_events": "events19-26 last 3 of 8: 24 return home#1 eligible; 25 flee#1 blocked; 26 Flamestrike#1 eligible",
+    "last": "answer_help, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "call_help": "Ask chosen kin; stay here.",
+        "use_flamestrike": "Strike a hostile from your threat list with fire."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

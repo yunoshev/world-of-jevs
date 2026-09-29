@@ -1,0 +1,123 @@
+{
+  "entry": 1725,
+  "creatureName": "Defias Watchman",
+  "identity": "a Defias Watchman guarding the approach to Rhahk'Zor",
+  "characterBrief": {
+    "identity": "Defias Watchman near Rhahk'Zor.",
+    "local_goal": "Guard the approach to Rhahk'Zor.",
+    "allies": [
+      "Rhahk'Zor and nearby Defias defenders."
+    ],
+    "enemies": [
+      "Visible hostiles on the guarded approach."
+    ],
+    "relationships": [
+      "Guards the approach beside another watchman."
+    ],
+    "temperament": "Alert and defensive.",
+    "risk": "Holds position instead of fleeing.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "a Defias Watchman guarding the approach to Rhahk'Zor",
+    "flee": "Hold your ground; your original behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 1725,
+        "spell": 6660,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          2000,
+          2000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": 30,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "0–0 ms",
+          "repeat": "2000–2000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6660,
+          "slug": "shoot",
+          "name": "Shoot",
+          "target": "enemy",
+          "does": "Shoot the engaged enemy while it remains at range.",
+          "tendency": "Use from 5-30 yards; normally repeat every 2 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "defias-watchman",
+  "title": "Defias Watchman",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/defias-watchman.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

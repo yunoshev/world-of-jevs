@@ -1,0 +1,125 @@
+{
+  "entry": 3586,
+  "creatureName": "Miner Johnson",
+  "identity": "Miner Johnson, a Defias miner in the Deadmines",
+  "characterBrief": {
+    "identity": "Miner Johnson in the Deadmines.",
+    "local_goal": "Fight visible intruders if still present after arrival.",
+    "allies": [
+      "Nearby Defias defenders."
+    ],
+    "enemies": [
+      "Visible hostiles threatening nearby Defias."
+    ],
+    "relationships": [
+      "Fights beside nearby Defias defenders."
+    ],
+    "temperament": "Defensive and workmanlike.",
+    "risk": "Does not flee by a low-health script.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "No authored voice style.",
+    "speech": "No authored speech behavior.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities."
+    ]
+  },
+  "original": {
+    "identity": "Miner Johnson, a Defias miner in the Deadmines",
+    "flee": "Do not flee by a low-health script.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 3586,
+        "spell": 12097,
+        "initial_ms": [
+          1000,
+          7000
+        ],
+        "repeat_ms": [
+          20000,
+          25000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "victim",
+        "target_radius_yards": null,
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "1000–7000 ms",
+          "repeat": "20000–25000 ms"
+        },
+        "sheetAbility": {
+          "spell": 12097,
+          "slug": "strike",
+          "name": "Strike",
+          "target": "enemy",
+          "does": "Strike your current victim in combat.",
+          "tendency": "Use after 1-7 seconds; repeat after 20-25 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "miner-johnson",
+  "title": "Miner Johnson",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/miner-johnson.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 100%; at your post; free to act",
+    "legend": "A=can attack; U1=Strike",
+    "enemies": "none",
+    "kin": "a0 self full; a1 kin full close free; a2 kin full close free; a3 kin full close free; a4 kin full near free; a5 kin full mid-range free; a6 kin full mid-range free",
+    "scene": "0 attackers; 6 observed kin",
+    "magic": "U1=Strike: physically ready, aura none",
+    "triggers": "aggro#1 blocked by target; attack0; help call#1 blocked by combat; kin3/engaged foes0; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 eligible; peaceful; return home#1 blocked by home; engine overlay; Strike#1 blocked by combat; first1s-7s/repeat20s-25s,combat,engaged; physical0/eligible0",
+    "trigger_events": "events1-8 last 3 of 8: 6 return home#1 blocked; 7 flee#1 blocked; 8 Strike#1 blocked",
+    "character": {
+      "id": "Miner Johnson in the Deadmines",
+      "goal": "Fight intruders if still present after arrival",
+      "ally": "Defias defenders",
+      "enemy": "hostiles threatening Defias",
+      "ties": "Fights beside Defias defenders",
+      "mood": "Defensive/workmanlike",
+      "risk": "Does not flee by a low-health script",
+      "known": "state/kin/listed triggers/abilities only",
+      "voice": "unspecified",
+      "speech": "none authored",
+      "rules": "eligible listed actions/targets only/no invented facts/abilities"
+    },
+    "routine": "usual routine: stand at your post; ready to resume"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose only listed eligible actions and targets.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "follow_routine": "Follow your usual stand, roam, or patrol routine."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 3,
+  "revision": 1,
+  "groups": [
+    {
+      "id": "murlocs",
+      "enabled": true,
+      "map_id": 0,
+      "control": "original",
+      "actors": [
+        {
+          "spawn_id": 123456789,
+          "entry": 127,
+          "control": "inherit",
+          "aggro_talk": false
+        }
+      ],
+      "spells": [
+        {
+          "entry": 127,
+          "spell": 11831,
+          "initial_ms": [
+            2000,
+            7300
+          ],
+          "repeat_ms": [
+            17200,
+            31400
+          ],
+          "ticks_out_of_combat": true,
+          "chance_pct": 100,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": true,
+          "max_distance_yards": 10.0,
+          "require_aura_absent": false,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        },
+        {
+          "entry": 127,
+          "spell": 744,
+          "initial_ms": [
+            6600,
+            10200
+          ],
+          "repeat_ms": [
+            19500,
+            31800
+          ],
+          "ticks_out_of_combat": false,
+          "chance_pct": 80,
+          "target": "enemy",
+          "allow_self": false,
+          "require_caster_combat": true,
+          "require_target_in_combat": false,
+          "require_engaged": false,
+          "max_distance_yards": null,
+          "require_aura_absent": true,
+          "max_target_health_pct": null,
+          "timer_mode": "timer",
+          "once_per_epoch": false,
+          "completion": "cast"
+        }
+      ],
+      "flee": {
+        "enabled": true,
+        "max_health_pct": 15,
+        "once_per_epoch": true,
+        "require_in_combat": true,
+        "require_not_casting": true,
+        "require_engaged": true,
+        "max_distance_yards": 40.0
+      },
+      "aggro_talk": {
+        "enabled": false,
+        "chance_pct": 0,
+        "text_group": 0
+      },
+      "ambient_talk": {
+        "enabled": false,
+        "initial_ms": [
+          0,
+          0
+        ],
+        "repeat_ms": [
+          0,
+          0
+        ],
+        "chance_pct": 0,
+        "text_group": 0
+      }
+    }
+  ]
+}

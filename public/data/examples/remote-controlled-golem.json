@@ -1,0 +1,52 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 100%; at your post; fighting",
+    "legend": "A=can attack",
+    "enemies": "e1 player high close engaged attacks kin A",
+    "kin": "a0 self full; a1 kin critical close fighting; a2 kin full near free; a3 kin full mid-range free; a4 kin full mid-range free; a5 kin full mid-range free; a6 kin full mid-range free; a7 kin full mid-range free; a8 kin full mid-range free",
+    "scene": "1 attackers; 8 observed kin",
+    "magic": "no spell facts",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 blocked by combat; peaceful; return home#1 eligible; engine overlay",
+    "trigger_events": "events5-12 last 3 of 8: 10 help call#1 blocked; 11 routine#1 blocked; 12 return home#1 eligible",
+    "character": {
+      "id": "RC Golem",
+      "goal": "Fight with defenders until destroyed",
+      "ally": "Summoner/defenders",
+      "enemy": "group hostiles",
+      "ties": "Summoned by Engineer",
+      "mood": "Direct/persistent",
+      "risk": "Fight until destroyed; never flee",
+      "known": "state/kin/listed triggers/abilities only",
+      "voice": "unspecified",
+      "speech": "none authored",
+      "rules": "eligible listed actions/targets only/no invented facts/abilities"
+    },
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose only listed eligible actions and targets.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

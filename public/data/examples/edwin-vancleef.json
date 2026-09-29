@@ -1,0 +1,37 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp below 15%; at your post; fighting",
+    "enemy_summary": "hp 1 high; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 1 critical,4 full; call 0, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=blocked(target),kin=0,engaged=1;help_answer#1=blocked(target),requests=0;flee#1=blocked(policy),policy=disabled;routine#1=active;return#1=eligible;spell_674#1=blocked(combat),physical=1/eligible=0;health_event_vancleef_mid_talk#1=blocked(once);health_event_vancleef_allies#1=blocked(once);health_event_vancleef_low_talk#1=blocked(once);aggro_event_vancleef_aggro#2=blocked(once)",
+    "trigger_events": "events29-36,last3/8:34:health_event_vancleef_low_talk#1=succeeded;35:help_call#1=succeeded;36:help_call#1=blocked",
+    "character": "id=Edwin VanCleef, Defias Kingpin;goal=Defend the Brotherhood;ally=Defias defenders summoned from shadows;enemy=challengers;ties=Leads the Brotherhood;mood=Defiant;risk=Holds ground; calls allies when wounded;known=state/kin/listed triggers/abilities only;voice=Authored Brotherhood lines only;speech=Aggro, health, kill, death groups 0-5;rules=eligible listed actions/targets only/no invented facts/abilities/Preserve health speech",
+    "last": "call_help, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose only listed eligible actions and targets.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

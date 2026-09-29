@@ -1,0 +1,39 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 40-70%; 6 yd from your post; fighting",
+    "enemy_summary": "hp 1 high; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 1 mid,8 full; call 1, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=eligible,kin=1,engaged=1;help_answer#1=blocked(target),requests=0;flee#1=blocked(health),targets=1;routine#1=active;return#1=eligible;spell_3605#1=eligible,physical=1/eligible=1;spell_6660#1=blocked(target),physical=0/eligible=0",
+    "trigger_events": "events14-21,last3/8:19:help_call#1=blocked;20:help_call#1=eligible;21:spell_3605#1=eligible",
+    "character": "id=Goblin Engineer;goal=Defend Gilnid/Foundry;ally=Gilnid/defenders/golems;enemy=Foundry hostiles;ties=Summons RC Golem;mood=Defensive/technical;risk=Flee to defenders under 15% HP;known=state/kin/listed triggers/abilities only;voice=unspecified;speech=none authored;rules=eligible listed actions/targets only/no invented facts/abilities",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting.",
+        "call_help": "Ask kin; stay here.",
+        "use_summon_remote_controlled_golem": "Due: Deploy a Remote-Controlled Golem to fight beside you."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

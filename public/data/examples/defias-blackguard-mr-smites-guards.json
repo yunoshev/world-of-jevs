@@ -1,0 +1,53 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 40-70%; at your post; fighting",
+    "legend": "A=can attack; U1=Faded",
+    "enemies": "e1 player mid close engaged attacks kin A",
+    "kin": "a0 self mid U1; a1 kin full close fighting",
+    "scene": "1 attackers; 1 observed kin",
+    "magic": "U1=Faded: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 active; peaceful; return home#1 eligible; engine overlay; stock aggro talk#1 blocked by once; 100% on aggro,once/combat; Faded#1 eligible; first0s/repeat1200s,no aura; physical1/eligible1",
+    "trigger_events": "events12-19 last 3 of 8: 17 Faded#1 eligible; 18 stock aggro talk#1 reserved; 19 stock aggro talk#1 succeeded",
+    "character": {
+      "id": "Defias Blackguard at Mr. Smite's post",
+      "goal": "Guard the weapon point",
+      "ally": "Mr. Smite/linked Blackguard",
+      "enemy": "ship intruders",
+      "ties": "Mr. Smite aids this guard",
+      "mood": "Aggressive",
+      "risk": "Holds ground",
+      "known": "state/kin/listed triggers/abilities only",
+      "voice": "Authored aggro text only",
+      "speech": "Aggro group 0 only",
+      "rules": "eligible listed actions/targets only/Do not invent abilities/Preserve native respawn/aggro/Stock energy attacks unavailable"
+    },
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "use_faded": "Due: Gain the native Faded aura when respawning."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

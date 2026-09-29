@@ -1,0 +1,53 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 70-95%; 11 yd from your post; fighting",
+    "legend": "A=can attack; U1=Bloodsail Companion",
+    "enemies": "e1 player high close engaged attacks kin A",
+    "kin": "a0 self high U1; a1 kin full mid-range free; a2 kin full mid-range free",
+    "scene": "1 attackers; 2 observed kin",
+    "magic": "U1=Bloodsail Companion: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 active; peaceful; return home#1 eligible; engine overlay; Bloodsail Companion#1 eligible; first1s/repeat0s; physical1/eligible1",
+    "trigger_events": "events9-16 last 3 of 8: 14 system combat_enter; 15 help call#1 blocked; 16 return home#1 eligible",
+    "character": {
+      "id": "Defias Pirate aboard ship",
+      "goal": "Guard the ship/its officers",
+      "ally": "Ship crew/summoned companion",
+      "enemy": "ship intruders",
+      "ties": "Summons one loyal companion while at post",
+      "mood": "Watchful/aggressive",
+      "risk": "Holds the ship",
+      "known": "state/kin/listed triggers/abilities only",
+      "voice": "unspecified",
+      "speech": "none authored",
+      "rules": "eligible listed actions/targets only/no invented facts/abilities/Summon only the configured companion"
+    },
+    "last": "idle, nothing since - long ago"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "use_bloodsail_companion": "Due: Summon your one configured Defias Companion."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

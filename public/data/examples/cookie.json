@@ -1,0 +1,53 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 70-95%; at your post; fighting",
+    "legend": "A=can attack; U1=Acid Splash; U2=Cookie's Cooking",
+    "enemies": "e1 player full close engaged attacks kin A",
+    "kin": "a0 self high U1",
+    "scene": "1 attackers; 0 observed kin",
+    "magic": "U1=Acid Splash: physically ready, aura none; U2=Cookie's Cooking: physically ready, aura none",
+    "triggers": "aggro#1 active; attack1; help call#1 blocked by target; kin0/engaged foes1; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 blocked by combat; peaceful; return home#1 eligible; engine overlay; Cookie's Cooking#1 waiting 5-15s; first10s-12s/repeat15s-25s,combat; physical1/eligible0; Acid Splash#1 eligible; first1s-7s/repeat20s-25s,combat; physical1/eligible1",
+    "trigger_events": "events4-11 last 3 of 8: 9 flee#1 blocked; 10 aggro#1 succeeded; 11 Acid Splash#1 eligible",
+    "character": {
+      "id": "Cookie, ship's cook",
+      "goal": "Defend your encounter area",
+      "ally": "Defias defenders",
+      "enemy": "hostile intruders",
+      "ties": "Ship's cook",
+      "mood": "Hostile when engaged",
+      "risk": "Holds ground; SmartAI has no flee event",
+      "known": "Knows state, kin, listed triggers/abilities",
+      "voice": "unspecified",
+      "speech": "No configured speech behavior",
+      "rules": "eligible listed actions/targets only/Do not invent abilities, summons, or phases"
+    },
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "attack": "Attack a chosen enemy.",
+        "stop_fighting": "Stop fighting; stay here.",
+        "use_acid_splash": "Due: Use the pinned SmartAI self-cast action."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

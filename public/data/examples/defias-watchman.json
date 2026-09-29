@@ -1,0 +1,40 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "you": "a Defias Watchman guarding the approach to Rhahk'Zor",
+    "self": "hp 100%; at your post; free to act",
+    "legend": "A=can attack; U1=Shoot",
+    "enemies": "e1 player full close seen A",
+    "kin": "a0 self full; a1 kin full mid-range free",
+    "scene": "0 attackers; 1 observed kin",
+    "magic": "U1=Shoot: physically ready, aura none",
+    "triggers": "aggro#1 eligible; attack1; help call#1 blocked by combat; kin0/engaged foes0; help answer#1 blocked by target; requests0; flee#1 blocked by policy; disabled by policy; routine#1 eligible; peaceful; return home#1 blocked by home; engine overlay; Shoot#1 blocked by combat; first0s/repeat2s,combat,engaged,target<=30yd; physical0/eligible0",
+    "trigger_events": "events1-8 last 3 of 8: 6 return home#1 blocked; 7 flee#1 blocked; 8 Shoot#1 blocked",
+    "routine": "usual routine: stand at your post; ready to resume"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Choose eligible action.",
+      "criteria": {
+        "hold": "Continue current activity; no new order.",
+        "follow_routine": "Follow your usual stand, roam, or patrol routine.",
+        "attack": "Attack a chosen enemy."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

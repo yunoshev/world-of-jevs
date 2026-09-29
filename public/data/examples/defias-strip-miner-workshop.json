@@ -1,0 +1,40 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "self": "hp 100%; 5 yd from your post; fighting",
+    "enemy_summary": "hp 1 full; range 1 <5yd; 1 attackers, 1 players, 1 engaged, 1 attack kin; attack 1, flee 0",
+    "kin_summary": "kin health 8 full,1 critical; call 0, run-to 0",
+    "triggers": "aggro#1=active,attack=1;help_call#1=blocked(target),kin=0,engaged=1;help_answer#1=eligible,requests=1;flee#1=blocked(health),targets=1;routine#1=active;return#1=eligible;spell_6016#6=eligible,physical=1/eligible=1",
+    "trigger_events": "events32-39,last3/8:37:spell_6016#6=rearmed;38:help_answer#1=eligible;39:spell_6016#6=eligible",
+    "help": "h1:kin/critical>p/full,ttl5-10s",
+    "character": "id=Defias Strip Miner in the Deadmines;goal=Defend the mine work area with other Defias;ally=Deadmines defenders;enemy=hostiles threatening work area;ties=Fights beside Defias defenders;mood=Defensive/group-oriented;risk=Seeks Defias help when nearly dead;known=state/kin/listed triggers/abilities only;voice=unspecified;speech=none authored;rules=eligible listed actions/targets only/no invented facts/abilities",
+    "last": "attack, nothing since - just now"
+  },
+  "questions": {
+    "intent": {
+      "type": "choice",
+      "instructions": "Prefer due original moves to attack/hold.",
+      "criteria": {
+        "hold": "Continue current activity.",
+        "attack": "Attack chosen enemy.",
+        "stop_fighting": "Stop fighting.",
+        "answer_help": "Answer exact request.",
+        "use_pierce_armor": "Due: Strike the current enemy and weaken its armor."
+      }
+    },
+    "afraid": {
+      "type": "noul",
+      "instructions": "Are you afraid right now?"
+    },
+    "danger": {
+      "type": "score",
+      "instructions": "How dangerous is your situation?",
+      "criteria": [
+        "safe",
+        "wary",
+        "threatened",
+        "fighting for your life"
+      ]
+    }
+  }
+}

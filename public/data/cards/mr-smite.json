@@ -1,0 +1,165 @@
+{
+  "entry": 646,
+  "creatureName": "Mr. Smite",
+  "identity": "Mr. Smite, the Deadmines ship's first mate guarding the ship encounter",
+  "characterBrief": {
+    "identity": "Mr. Smite, first mate.",
+    "local_goal": "Guard the encounter.",
+    "allies": [
+      "Two Blackguards."
+    ],
+    "enemies": [
+      "Visible hostiles."
+    ],
+    "relationships": [
+      "Leads Blackguards.",
+      "Uses the weapon point in phases."
+    ],
+    "temperament": "Confrontational.",
+    "risk": "Never flees; phases pause.",
+    "knowledge_boundary": "Knows only visible state, nearby kin, listed triggers, and abilities.",
+    "voice": "Authored text only.",
+    "speech": "Phase groups 2 and 3.",
+    "constraints": [
+      "Use only eligible actions and targets.",
+      "Do not invent unseen facts or abilities.",
+      "Mandatory phases.",
+      "Server controls phase mechanics."
+    ]
+  },
+  "original": {
+    "identity": "Mr. Smite, the Deadmines ship's first mate guarding the ship encounter",
+    "flee": "Hold ground; this original boss behavior does not flee.",
+    "note": "Pinned source-derived behavior is represented here by the checked-in ability sheet and timing policy."
+  },
+  "jev": {
+    "control": "jev",
+    "activation": {
+      "mode": "near_player",
+      "radius_yards": 60
+    },
+    "spells": [
+      {
+        "entry": 646,
+        "spell": 6435,
+        "initial_ms": [
+          3000,
+          3000
+        ],
+        "repeat_ms": [
+          6000,
+          6000
+        ],
+        "ticks_out_of_combat": false,
+        "chance_pct": 100,
+        "target": "enemy",
+        "target_selector": "victim",
+        "allow_self": false,
+        "require_caster_combat": true,
+        "require_target_in_combat": false,
+        "require_engaged": true,
+        "max_distance_yards": null,
+        "require_aura_absent": false,
+        "max_target_health_pct": null,
+        "max_caster_health_pct": 33,
+        "timer_mode": "timer",
+        "once_per_epoch": false,
+        "completion": "cast",
+        "timings": {
+          "initial": "3000–3000 ms",
+          "repeat": "6000–6000 ms"
+        },
+        "sheetAbility": {
+          "spell": 6435,
+          "slug": "smite_slam",
+          "name": "Smite Slam",
+          "target": "enemy",
+          "does": "Slam your current victim with a heavy blow.",
+          "tendency": "Below 33% health, repeat every 6 seconds.",
+          "ally_below_pct": null
+        }
+      }
+    ],
+    "flee": {
+      "enabled": false,
+      "max_health_pct": 15,
+      "once_per_epoch": true,
+      "require_in_combat": true,
+      "require_not_casting": true,
+      "require_engaged": true,
+      "max_distance_yards": 40
+    },
+    "aggroTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0
+    },
+    "ambientTalk": {
+      "enabled": false,
+      "chance_pct": 0,
+      "text_group": 0,
+      "initial_ms": [
+        0,
+        0
+      ],
+      "repeat_ms": [
+        0,
+        0
+      ]
+    },
+    "summons": [],
+    "createdBy": null,
+    "deathEffects": [],
+    "healthPhases": [
+      {
+        "id": "smite_two_swords",
+        "entry": 646,
+        "trigger_below_health_pct": 67,
+        "transition_spell": 6432,
+        "talk_group": 2,
+        "destination": {
+          "x": 1.859,
+          "y": -780.72,
+          "z": 9.831,
+          "o": 5.558
+        },
+        "equipment_id": 2,
+        "dual_wield": true,
+        "equipment_delay_ms": 1500,
+        "restore_combat_ms": 3000,
+        "tactical_delay_ms": 10000
+      },
+      {
+        "id": "smite_hammer",
+        "entry": 646,
+        "trigger_below_health_pct": 34,
+        "transition_spell": 6432,
+        "talk_group": 3,
+        "destination": {
+          "x": 1.859,
+          "y": -780.72,
+          "z": 9.831,
+          "o": 5.558
+        },
+        "equipment_id": 3,
+        "dual_wield": false,
+        "equipment_delay_ms": 1500,
+        "restore_combat_ms": 3000,
+        "tactical_delay_ms": 10000
+      }
+    ],
+    "healthEvents": [],
+    "aggroEvents": []
+  },
+  "cardId": "mr-smite",
+  "title": "Mr. Smite",
+  "realExample": {
+    "available": false,
+    "note": "Superseded by the original request link."
+  },
+  "originalRequest": {
+    "available": true,
+    "file": "data/examples/mr-smite.json",
+    "note": "Exact saved single-batch provider payload: model, state, and questions."
+  }
+}
